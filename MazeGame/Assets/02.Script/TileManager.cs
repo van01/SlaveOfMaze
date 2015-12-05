@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class TileManager : MonoBehaviour {
 
+	private GameObject m_objTileMap = null;
+	private GameObject m_objBlockMap = null;
+
 	private Vector2 m_StartPos;
 
 	static TileManager pInstnace = null;
@@ -17,8 +20,25 @@ public class TileManager : MonoBehaviour {
 		return pInstnace;
 	}
 
+	public void ClearMap()
+	{
+		if (m_objTileMap != null) {
+			Destroy (m_objTileMap);
+		}
+		m_objTileMap = new GameObject ();
+		m_objTileMap.transform.parent = this.transform;
+
+		if (m_objBlockMap != null) {
+			Destroy (m_objBlockMap);
+		}
+		m_objBlockMap = new GameObject ();
+		m_objBlockMap.transform.parent = this.transform;
+	}
+
 	public void StartStage(int nStageNumber)
 	{
+		ClearMap();
+
 		int [,] arMap = MapData.GetInstance().GetTileMap (nStageNumber);
 		int [,] arBlock = MapData.GetInstance().GetBlock (nStageNumber);
 		int [,] arStartEnd = MapData.GetInstance().GetStartEnd  (nStageNumber);
@@ -31,6 +51,7 @@ public class TileManager : MonoBehaviour {
 				GameObject obj = GetTile(nNum);
 				if (obj != null)
 				{
+					obj.transform.parent = m_objTileMap.transform;
 					obj.transform.localPosition = new Vector3 (i,0, j);
 				}
 				else
@@ -49,6 +70,7 @@ public class TileManager : MonoBehaviour {
 					GameObject obj = GetBlock ();
 					if (obj != null)
 					{
+						obj.transform.parent = m_objBlockMap.transform;
 						obj.transform.localPosition = new Vector3 (i, 0, j);
 					}
 					else
@@ -80,49 +102,26 @@ public class TileManager : MonoBehaviour {
 
 	private void SetExit (Vector2 pos)
 	{
-		GameObject exitObject = GetPrefab ("Goal", eResType.Custom);
+		GameObject exitObject = Util.GetPrefab ("Goal", eResType.Custom);
+		exitObject.transform.parent = m_objBlockMap.transform;
 		exitObject.transform.localPosition = new Vector3 (pos.x, 0, pos.y);
 	}
 
 	private GameObject GetBlock()
 	{
 		string [] arString = {"obj_planter1"};
-		string strCharater = string.Empty;
-		int nSubNum = 2;
+		//string strCharater = string.Empty;
+		//int nSubNum = 2;
 		int nLastNum = 0;
 		
 		string prefabName = arString[nLastNum];
 
-		GameObject tileObject = GetPrefab (prefabName);
+		GameObject tileObject = Util.GetPrefab (prefabName);
 		tileObject.transform.localScale = new Vector3 (0.6f, 0.6f, 0.6f);
 
 		return tileObject;
 	}
 
-
-	enum eResType{
-		Default,
-		Custom
-	}
-	private GameObject GetPrefab(string prefabName, eResType eType = eResType.Default)
-	{
-		string path = string.Empty;
-
-		switch (eType) {
-		case eResType.Default:
-			path = "Models/mmmm/core/prefabs/{0}";
-			break;
-		case eResType.Custom:
-			path = "prefabs/{0}";
-			break;
-		}
-
-		string resPath = string.Format (path, prefabName);
-		//		Debug.Log ("path : " + resPath);
-		GameObject prefabs = Resources.Load ( resPath ) as GameObject;
-		GameObject obj = GameObject.Instantiate( prefabs );
-		return obj;
-	}
 
 	private GameObject GetTile(int nNum)
 	{

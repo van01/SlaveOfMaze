@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
-	public int m_nStage = 1;
+	public int m_nStage = 0;
 	public UnitControl m_Player;
 
 	static GameManager m_instance = null;
@@ -24,14 +24,20 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 	}
 
+
 	public void OnGoal() {
-		GameObject.Find ("Popup_ClearStage").SetActive (true);
+		PopupMgr.GetInstance().ShowPopup (ePopupType.StageEnd);
 	}
 
 	public void NextStage()
 	{
 		TileManager tileMgr = TileManager.GetInstnace ();
-		
+
+		m_nStage++;
+		if (m_nStage > 2) {
+			m_nStage = 1;
+		}
+
 		tileMgr.StartStage (m_nStage);
 		Vector2 startPosition = tileMgr.GetStartPosition ();
 		m_Player.Initialize (startPosition.x, startPosition.y);

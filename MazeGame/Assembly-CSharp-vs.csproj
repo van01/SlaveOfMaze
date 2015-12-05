@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\02.Script\CameraMovement.cs" />
+     <Compile Include="Assets\02.Script\EnumList.cs" />
      <Compile Include="Assets\02.Script\GameManager.cs" />
      <Compile Include="Assets\02.Script\MapData.cs" />
      <Compile Include="Assets\02.Script\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
@@ -186,9 +187,11 @@
      <Compile Include="Assets\02.Script\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\02.Script\Popup\Popup_ClearStage.cs" />
+     <Compile Include="Assets\02.Script\PopupMgr.cs" />
      <Compile Include="Assets\02.Script\Tags.cs" />
      <Compile Include="Assets\02.Script\TileManager.cs" />
      <Compile Include="Assets\02.Script\UnitControl.cs" />
+     <Compile Include="Assets\02.Script\Util.cs" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\02.Script\NGUI\ReadMe - 3.6.6.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text 2.shader" />

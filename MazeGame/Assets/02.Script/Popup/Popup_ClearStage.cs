@@ -17,5 +17,6 @@ public class Popup_ClearStage : MonoBehaviour {
 	{
 		GameManager.GetInstance ().NextStage ();
 		gameObject.SetActive (false);
+		Destroy (this);
 	}
 }
