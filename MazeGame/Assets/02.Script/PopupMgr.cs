@@ -19,6 +19,9 @@ public class PopupMgr : MonoBehaviour {
 		GameObject obj = null;
 		switch (ePopup)
 		{
+		case ePopupType.StageReady:
+			obj = Util.GetPrefab ("Popup_ReadyStage", eResType.Popup);
+			break;
 		case ePopupType.StageEnd:
 			obj = Util.GetPrefab ("Popup_ClearStage", eResType.Popup);
 			break;

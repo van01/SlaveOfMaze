@@ -187,6 +187,7 @@
      <Compile Include="Assets\02.Script\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\02.Script\Popup\Popup_ClearStage.cs" />
+     <Compile Include="Assets\02.Script\Popup\Popup_ReadyStage.cs" />
      <Compile Include="Assets\02.Script\PopupMgr.cs" />
      <Compile Include="Assets\02.Script\Tags.cs" />
      <Compile Include="Assets\02.Script\TileManager.cs" />
