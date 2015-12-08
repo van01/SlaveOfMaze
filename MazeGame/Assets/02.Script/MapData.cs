@@ -1,10 +1,77 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+public class TileData{
+	public int nTile;
+	public int nBlock;
+	public int nEvent;
+	
+	public TileData (int nTile, int nBlock=0, int nEvent = 0)
+	{
+		this.nTile = nTile;
+		this.nBlock = nBlock;
+		this.nEvent = nEvent;
+	}
+}
+
+public class MapFile {
+	TileData [,]m_Map;
+	
+	public MapFile (int nWidth, int nHeight, int nTileType)
+	{
+		m_Map = new TileData[nWidth, nHeight];
+		
+		for (int i=0; i<nWidth; i++)
+		{
+			for (int j=0; j<nHeight; j++)
+			{
+				m_Map[i,j] = new TileData(nTileType);
+			}
+		}
+	}
+
+	
+	public MapFile (int [,]arMap, int [,]arBlock, int [,]arStartEnd)
+	{
+		int nHeight = arMap.GetLength (0);
+		int nWidth = arMap.GetLength (1);
+
+		m_Map = new TileData[nWidth, nHeight];
+		
+		for (int i=0; i<nHeight; i++) 
+		{
+			for (int j=0; j<nWidth; j++)
+			{
+				int nMap = arMap[i,j];
+				int nBlock = arBlock[i,j];
+				int nStartEnd = arStartEnd[i, j];
+				
+				m_Map[i,j] = new TileData(nMap, nBlock, nStartEnd);
+			}
+		}
+	}
+
+	public int GetWidth()
+	{
+		return m_Map.GetLength (0);
+	}
+
+	public int GetHeight()
+	{
+		return m_Map.GetLength (1);
+	}
+
+	public TileData GetTile (int i, int j)
+	{
+		return m_Map [i, j];
+	}
+
+}
 
 public class MapData {
 
 	static private MapData m_instnace = null;
-
 	static public MapData GetInstance()
 	{
 		if (m_instnace == null) {
@@ -13,38 +80,41 @@ public class MapData {
 		return m_instnace;
 	}
 
-	public int[,] GetTileMap(int nStage)
+	//MapFile
+	List<MapFile> m_ListMapContainer = new List<MapFile>();
+
+	public MapData()
 	{
-		switch (nStage) {
-		case 1:
-			return arMap1;
-		case 2:
-			return arMap2;
-		}
-		return null;
+		//arMap1;
+		//arBlock1;
+		//arStartEnd1
+
+		MapFile mapFile = new MapFile (arMap1, arBlock1, arStartEnd1);
+		m_ListMapContainer.Add (mapFile);
+
+		mapFile = new MapFile (arMap2, arBlock2, arStartEnd2);
+		m_ListMapContainer.Add (mapFile);
+
 	}
 
-	public int[,] GetBlock(int nStage)
+	public MapFile GetTileMap(int nStage)
 	{
-		switch (nStage) {
-		case 1:
-			return arBlock1;
-		case 2:
-			return arBlock2;
-		}
-		return null;
+		return m_ListMapContainer [nStage];
+	}
+	//******************************//
+	// Edit Map
+	//******************************//
+	MapFile m_EditMap = null;
+	public void CreateNewMap(int nWidth, int nHeight, int nTileType)
+	{
+		m_EditMap = new MapFile (nWidth, nHeight, nTileType);
 	}
 
-	public int[,] GetStartEnd (int nStage)
+	public MapFile GetEditMap ()
 	{
-		switch (nStage) {
-		case 1:
-			return arStartEnd1;
-		case 2:
-			return arStartEnd2;
-		}
-		return null;
+		return m_EditMap;
 	}
+	
 
 
 	/*********** Stage 1 *************/

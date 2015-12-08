@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 	}
 	private eStage m_eStage;
 
-	public int m_nStage = 0;
+	public int m_nStage = -1;
 	public UnitControl m_Player;
 
 	static GameManager m_instance = null;
@@ -57,8 +57,8 @@ public class GameManager : MonoBehaviour {
 	public void NextStage()
 	{
 		m_nStage++;
-		if (m_nStage > 2) {
-			m_nStage = 1;
+		if (m_nStage > 1) {
+			m_nStage = 0;
 		}
 
 		StartGame (m_nStage);

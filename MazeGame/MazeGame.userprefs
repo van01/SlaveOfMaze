@@ -1,15 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02.Script/Popup/Popup_ReadyStage.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02.Script/Edit/Edit_Popup_Create.cs">
     <Files>
-      <File FileName="Assets/02.Script/GameManager.cs" Line="67" Column="2" />
+      <File FileName="Assets/02.Script/GameManager.cs" Line="61" Column="16" />
       <File FileName="Assets/02.Script/EnumList.cs" Line="13" Column="12" />
       <File FileName="Assets/02.Script/PopupMgr.cs" Line="23" Column="45" />
       <File FileName="Assets/02.Script/Popup/Popup_ClearStage.cs" Line="18" Column="39" />
-      <File FileName="Assets/02.Script/TileManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/02.Script/TileManager.cs" Line="154" Column="23" />
       <File FileName="Assets/02.Script/UnitControl.cs" Line="115" Column="1" />
       <File FileName="Assets/02.Script/Popup/Popup_ReadyStage.cs" Line="9" Column="32" />
       <File FileName="Assets/02.Script/Util.cs" Line="24" Column="1" />
+      <File FileName="Assets/02.Script/Edit/Edit_Popup_Create.cs" Line="25" Column="37" />
+      <File FileName="Assets/02.Script/MapData.cs" Line="115" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

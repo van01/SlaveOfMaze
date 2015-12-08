@@ -38,66 +38,56 @@ public class TileManager : MonoBehaviour {
 	public void StartStage(int nStageNumber)
 	{
 		ClearMap();
+		MapFile fileMap = MapData.GetInstance().GetTileMap (nStageNumber);
+		CreateMap (fileMap);
+	}
 
-		int [,] arMap = MapData.GetInstance().GetTileMap (nStageNumber);
-		int [,] arBlock = MapData.GetInstance().GetBlock (nStageNumber);
-		int [,] arStartEnd = MapData.GetInstance().GetStartEnd  (nStageNumber);
-
-		for (int i=0; i<arMap.GetLength(0); ++i) 
-		{
-			for (int j=0; j<arMap.GetLength(1); j++)
+	private void CreateMap (MapFile fileMap)
+	{
+		for (int i=0; i<fileMap.GetHeight(); ++i) {
+			for (int j=0; j<fileMap.GetWidth(); ++j)
 			{
-				int nNum = arMap[i, j];
-				GameObject obj = GetTile(nNum);
-				if (obj != null)
+				TileData tile = fileMap.GetTile (i,j);
+				//***************************************//
+				
+				GameObject objTile = GetTile(tile.nTile);
+				if (objTile != null)
 				{
-					obj.transform.parent = m_objTileMap.transform;
-					obj.transform.localPosition = new Vector3 (i,0, j);
+					objTile.transform.parent = m_objTileMap.transform;
+					objTile.transform.localPosition = new Vector3 (i,0, j);
 				}
 				else
 				{
 					Debug.Log ("Tile is NULL");
 				}
-			}
-		}
-
-		for (int i=0; i<arBlock.GetLength(0); ++i) {
-			for (int j=0; j<arBlock.GetLength(1); ++j)
-			{
-				int nNum = arBlock[i, j];
-				if (nNum > 0)
+				
+				//***************************************//
+				if (tile.nBlock > 0)
 				{
-					GameObject obj = GetBlock ();
-					if (obj != null)
+					GameObject objBlock = GetBlock ();
+					if (objBlock != null)
 					{
-						obj.transform.parent = m_objBlockMap.transform;
-						obj.transform.localPosition = new Vector3 (i, 0, j);
+						objBlock.transform.parent = m_objBlockMap.transform;
+						objBlock.transform.localPosition = new Vector3 (i, 0, j);
 					}
 					else
 					{
 						Debug.Log ("Block is null");
 					}
 				}
-			}
-		}
-
-		for (int i=0; i<arStartEnd.GetLength(0); ++i) 
-		{
-			for (int j=0; j<arStartEnd.GetLength(1); j++)
-			{
-				int nNum = arStartEnd[i, j];
-				if (nNum == 1)
+				
+				//***************************************//
+				if (tile.nEvent == 1)
 				{
 					m_StartPos = new Vector2 (i, j);
 				}
-				else if (nNum == 2)
+				else if (tile.nEvent == 2)
 				{
 					Vector2 pos = new Vector2 (i, j);
 					SetExit (pos);
 				}
 			}
 		}
-
 	}
 
 	private void SetExit (Vector2 pos)
@@ -156,6 +146,13 @@ public class TileManager : MonoBehaviour {
 		return m_StartPos;
 	}
 
+	public void CreateNewMap (int nWidth, int nHeight, int nTileType)
+	{
+		ClearMap();
+		MapData.GetInstance().CreateNewMap (nWidth, nHeight, nTileType);
+		MapFile fileMap = MapData.GetInstance ().GetEditMap ();
+		CreateMap (fileMap);
+	}
 
 	// Use this for initialization
 	void Start () {
