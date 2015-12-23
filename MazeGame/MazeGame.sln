@@ -5,6 +5,8 @@ Project("{899D54F3-7FC1-0C13-CC33-7753E765F90D}") = "MazeGame", "Assembly-CSharp
 EndProject
 Project("{899D54F3-7FC1-0C13-CC33-7753E765F90D}") = "MazeGame", "Assembly-CSharp-Editor.csproj", "{28E71F1A-F883-1250-6F81-BA7E09B149C9}"
 EndProject
+Project("{899D54F3-7FC1-0C13-CC33-7753E765F90D}") = "MazeGame", "Assembly-UnityScript.unityproj", "{6D48521D-C23A-5999-8B10-42AF17CE42C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{28E71F1A-F883-1250-6F81-BA7E09B149C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28E71F1A-F883-1250-6F81-BA7E09B149C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28E71F1A-F883-1250-6F81-BA7E09B149C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D48521D-C23A-5999-8B10-42AF17CE42C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D48521D-C23A-5999-8B10-42AF17CE42C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D48521D-C23A-5999-8B10-42AF17CE42C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D48521D-C23A-5999-8B10-42AF17CE42C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																				GlobalSection(MonoDevelopProperties) = preSolution
+																																										GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

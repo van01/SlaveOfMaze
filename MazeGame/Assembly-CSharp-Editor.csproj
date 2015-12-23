@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\02.Script\Editor\MapTools\ObjectEditor.cs" />
+     <Compile Include="Assets\02.Script\Editor\Utility\BuildUtePrefabs.cs" />
      <Compile Include="Assets\02.Script\NGUI\Examples\Scripts\InventorySystem\Editor\InvDatabaseInspector.cs" />
      <Compile Include="Assets\02.Script\NGUI\Examples\Scripts\InventorySystem\Editor\InvFindItem.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\Editor\ActiveAnimationEditor.cs" />
@@ -129,41 +131,94 @@
      <Compile Include="Assets\02.Script\NGUI\Scripts\Editor\UIWidgetContainerEditor.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\Editor\UIWidgetInspector.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\Editor\UIWrapContentEditor.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteCategoryEditor.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteDocumentation.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteGiveFeedback.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteMapLoaderOnlineE.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteRportIssue.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteRuntimePrepare.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteScriptingReference.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteSettings.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteTileConnectionsEditor.cs" />
+     <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteVisitWebsite.cs" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\02.Script\NGUI\ReadMe - 3.6.6.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Models\Orc\Orc Skin.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Wooden\Arimo14.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\House_layers.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\myMap01_info.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text 1.shader" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored (TextureClip).shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\House_info.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (TextureClip).shader" />
+     <None Include="Assets\proTileMapEditor\utePatterns\terrain_pattern_02.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored 2.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\City.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\mcraft.txt" />
+     <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteMyPatterns.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage02_info.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\NewTest_layers.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\myMap01.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\terrain_pattern_02_layers.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\NewTest_info.txt" />
+     <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteMyMaps.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\terrain_pattern_2_layers.txt" />
+     <None Include="Assets\proTileMapEditor\utePatterns\utepatternsdirtagdonotdelete.txt" />
+     <None Include="Assets\proTileMapEditor\uteMyPatterns\utemypatternsdirtagdonotdelete.txt" />
+     <None Include="Assets\proTileMapEditor\utePatterns\terrain_pattern_1.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Terrain.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Simple_layers.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\utemapsdirtagdonotdelete.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text 3.shader" />
+     <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteCategoryInfo.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
+     <None Include="Assets\proTileMapEditor\Resources\uteForEditor\utePrievs.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\City_layers.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\myPattern01_layers.txt" />
+     <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteGUIDID.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\City_info.txt" />
+     <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteTileConnections.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\NewTest.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\mcraft_info.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage01_info.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage02_layers.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage02.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\myMap01_layers.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\mcraft_layers.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Terrain_info.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\terrain_pattern_1_layers.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Terrain_layers.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage01.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Simple.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteSettings.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Refractive.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage01_layers.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Depth.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\House.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Simple_info.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Resources\Localization.txt" />
  <Reference Include="UnityEngine.UI">
@@ -206,6 +261,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{A21DA567-4D02-FAFA-3719-CDAEF370184D}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript.unityproj">
+      <Project>{6D48521D-C23A-5999-8B10-42AF17CE42C0}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

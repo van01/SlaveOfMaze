@@ -8,7 +8,7 @@ public class PopupMgr : MonoBehaviour {
 	static public PopupMgr GetInstance()
 	{
 		if (m_instance == null) {
-			m_instance = GameObject.Find ("Panel").GetComponent<PopupMgr> ();
+			m_instance = GameObject.Find ("GameManager").GetComponent<PopupMgr> ();
 		}
 
 		return m_instance;

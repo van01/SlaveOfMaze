@@ -18,6 +18,17 @@ public class UnitControl : MonoBehaviour {
 
 	eAniState m_eAniState = eAniState.None;
 
+	static UnitControl m_Instnace = null;
+	public static UnitControl GetInstance()
+	{
+		return m_Instnace;
+	}
+
+	void OnEnable()
+	{
+		m_Instnace = this;
+	}
+
 	// Use this for initialization
 	void Start () {
 	}

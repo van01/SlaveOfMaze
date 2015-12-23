@@ -11,8 +11,7 @@ public class GameManager : MonoBehaviour {
 	}
 	private eStage m_eStage;
 
-	public int m_nStage = -1;
-	public UnitControl m_Player;
+	public int m_nStage = 1;
 
 	static GameManager m_instance = null;
 	static public GameManager GetInstance()
@@ -46,19 +45,30 @@ public class GameManager : MonoBehaviour {
 
 	public void StartGame(int nStage)
 	{
-		TileManager tileMgr = TileManager.GetInstnace ();
-
-		tileMgr.StartStage (nStage);
-		Vector2 startPosition = tileMgr.GetStartPosition ();
-		m_Player.Initialize (startPosition.x, startPosition.y);
+//		TileManager tileMgr = TileManager.GetInstnace ();
+//		tileMgr.StartStage (nStage);
+//		Vector2 startPosition = tileMgr.GetStartPosition ();
+		//UnitControl.GetInstance().Initialize (startPosition.x, startPosition.y);
 		//m_Player.transform.position = new Vector3 (startPosition.x, 0, startPosition.y);
+		Debug.Log ("Load Level : " + nStage);
+
+		string sceneName = string.Format ("Stage0{0}", nStage);
+
+		if (sceneName != Application.loadedLevelName) {
+			Application.LoadLevel (sceneName);
+		}
+
+		IngameCameraMove cameraMove = Camera.main.GetComponent<IngameCameraMove> ();
+		if (cameraMove == null) {
+			cameraMove = Camera.main.gameObject.AddComponent <IngameCameraMove>();
+		}
 	}
 
 	public void NextStage()
 	{
 		m_nStage++;
-		if (m_nStage > 1) {
-			m_nStage = 0;
+		if (m_nStage > 2) {
+			m_nStage = 1;
 		}
 
 		StartGame (m_nStage);
