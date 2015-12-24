@@ -3,27 +3,30 @@ using System.Collections;
 
 public class PopupMgr : MonoBehaviour {
 
-	static PopupMgr m_instance = null;
+	public delegate void deleCallback(int nType);
 
+	static PopupMgr m_instance = null;
 	static public PopupMgr GetInstance()
 	{
 		if (m_instance == null) {
-			m_instance = GameObject.Find ("GameManager").GetComponent<PopupMgr> ();
+			m_instance = GameObject.Find ("GameManager").AddComponent<PopupMgr>();
 		}
 
 		return m_instance;
 	}
 
-	public void ShowPopup (ePopupType ePopup)
+	public void ShowPopup (ePopupType ePopup, deleCallback delgate, string strDesc, string strButton)
 	{
 		GameObject obj = null;
 		switch (ePopup)
 		{
-		case ePopupType.StageReady:
-			obj = Util.GetPrefab ("Popup_ReadyStage", eResType.Popup);
-			break;
-		case ePopupType.StageEnd:
-			obj = Util.GetPrefab ("Popup_ClearStage", eResType.Popup);
+		case ePopupType.Common:
+		{
+			obj = Util.GetPrefab ("Popup_Common", eResType.Popup);
+			Popup_Common popup = obj.GetComponent <Popup_Common>();
+			popup.SetDelegate (delgate);
+			popup.SetText (strDesc, strButton);
+		}
 			break;
 		}
 

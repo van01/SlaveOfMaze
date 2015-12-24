@@ -64,6 +64,7 @@
      <None Include="Assets\proTileMapEditor\uteMaps\House_info.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (TextureClip).shader" />
      <None Include="Assets\proTileMapEditor\utePatterns\terrain_pattern_02.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage04.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored 2.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
@@ -71,15 +72,18 @@
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\mcraft.txt" />
      <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteMyPatterns.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage03_info.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage02_info.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\NewTest_layers.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\myMap01.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage03.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\terrain_pattern_02_layers.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\NewTest_info.txt" />
      <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteMyMaps.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\terrain_pattern_2_layers.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage04_layers.txt" />
      <None Include="Assets\proTileMapEditor\utePatterns\utepatternsdirtagdonotdelete.txt" />
      <None Include="Assets\proTileMapEditor\uteMyPatterns\utemypatternsdirtagdonotdelete.txt" />
      <None Include="Assets\proTileMapEditor\utePatterns\terrain_pattern_1.txt" />
@@ -92,6 +96,7 @@
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\utemapsdirtagdonotdelete.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text 3.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage04_info.txt" />
      <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteCategoryInfo.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
      <None Include="Assets\proTileMapEditor\Resources\uteForEditor\utePrievs.txt" />
@@ -127,6 +132,7 @@
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Depth.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage03_layers.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\House.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Simple_info.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />

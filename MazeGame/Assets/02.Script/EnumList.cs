@@ -9,6 +9,5 @@ public enum eResType{
 
 
 public enum ePopupType{
-	StageEnd,
-	StageReady,
+	Common,
 }
