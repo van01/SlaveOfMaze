@@ -1,13 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UnitControl : MonoBehaviour {
+public abstract class UnitControl : MonoBehaviour {
 
+	public enum eType{
+		Player,
+		Enermy
+	}
+
+	protected eType m_eType = eType.Player;
 	static float DEFAULT_SPEED = 5.0f;
 	private Vector3 m_Position;
 	private Vector3 m_PrevPosition;
-	
-	enum eAniState {
+
+	protected enum eAniState {
 		None = 0,
 		Move_Up = 1,
 		Move_Down = 2,
@@ -34,22 +40,28 @@ public class UnitControl : MonoBehaviour {
 	}
 
 	Rigidbody m_rigibody;
+
 	// Use this for initialization
-	void Start () {
+	protected void Start (eType type) {
+		m_eType = type;
 		m_rigibody = gameObject.GetComponent<Rigidbody> ();
 		m_rigibody.useGravity = true;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		InputProcess ();
+	protected void Update () {
+		if (m_isControl) {
+			InputProcess ();
+		}
+
 		ProcessState ();
 		CheckState ();
 	}
+
+	protected abstract void InputProcess ();
 	
 	void Move()
 	{
-		bool isArrive = false;
 		Vector3 pos = this.transform.localPosition;
 		float fSpeed = (DEFAULT_SPEED * Time.deltaTime);
 
@@ -71,28 +83,6 @@ public class UnitControl : MonoBehaviour {
 		this.transform.localPosition = pos;
 	}
 
-	void InputProcess()
-	{
-		if (!m_isControl) {
-			return;
-		}
-		//if (eAniState.Arrive_Goal != m_eAniState) {
-		if (Input.GetKey ("up")) {
-			//Move (0,1);
-			ChangeState (eAniState.Move_Up);
-		} else if (Input.GetKey ("down")) {
-			//Move (0,-1);
-			ChangeState (eAniState.Move_Down);
-		} else if (Input.GetKey ("left")) {
-			//Move (-1,0);
-			ChangeState (eAniState.Move_Left);
-		} else if (Input.GetKey ("right")) {
-			//Move (1,0);
-			ChangeState (eAniState.Move_Right);
-		} else {
-			ChangeState (eAniState.None);
-		}
-	}
 
 	void ProcessState ()
 	{
@@ -129,7 +119,7 @@ public class UnitControl : MonoBehaviour {
 	//*************************************************************//
 	// Change Stage method
 	//*************************************************************//
-	void ChangeState (eAniState eState)
+	protected void ChangeState (eAniState eState)
 	{
 		if (m_eAniState == eState) {
 			return;

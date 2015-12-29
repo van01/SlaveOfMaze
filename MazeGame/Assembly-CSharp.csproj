@@ -50,6 +50,7 @@
      <Compile Include="Assets\02.Script\Edit\Edit_Popup_Create.cs" />
      <Compile Include="Assets\02.Script\Edit\Edit_Popup_CreateMap.cs" />
      <Compile Include="Assets\02.Script\Edit\MapEditor.cs" />
+     <Compile Include="Assets\02.Script\Enermy.cs" />
      <Compile Include="Assets\02.Script\EnumList.cs" />
      <Compile Include="Assets\02.Script\GameManager.cs" />
      <Compile Include="Assets\02.Script\IngameCameraMove.cs" />
@@ -190,6 +191,7 @@
      <Compile Include="Assets\02.Script\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\02.Script\Player.cs" />
      <Compile Include="Assets\02.Script\Popup\Popup_Common.cs" />
      <Compile Include="Assets\02.Script\PopupMgr.cs" />
      <Compile Include="Assets\02.Script\Tags.cs" />
