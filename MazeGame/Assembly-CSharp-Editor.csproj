@@ -166,6 +166,7 @@
      <None Include="Assets\proTileMapEditor\uteMaps\Stage02_info.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\NewTest_layers.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\myMap01.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage05_info.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage03.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\terrain_pattern_02_layers.txt" />
@@ -215,6 +216,7 @@
      <None Include="Assets\proTileMapEditor\uteMaps\Stage01.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Simple.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage05.txt" />
      <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteSettings.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Refractive.shader" />
@@ -227,6 +229,7 @@
      <None Include="Assets\proTileMapEditor\uteMaps\Simple_info.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Resources\Localization.txt" />
+     <None Include="Assets\proTileMapEditor\uteMaps\Stage05_layers.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

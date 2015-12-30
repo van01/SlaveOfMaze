@@ -44,7 +44,8 @@ public abstract class UnitControl : MonoBehaviour {
 	// Use this for initialization
 	protected void Start (eType type) {
 		m_eType = type;
-		m_rigibody = gameObject.GetComponent<Rigidbody> ();
+		//m_rigibody = gameObject.GetComponent<Rigidbody> ();
+		m_rigibody = gameObject.AddComponent<Rigidbody> ();
 		m_rigibody.useGravity = true;
 	}
 	

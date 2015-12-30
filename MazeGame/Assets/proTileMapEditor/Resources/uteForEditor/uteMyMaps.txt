@@ -1,1 +1,1 @@
-House:City:Terrain:Simple:mcraft:myMap01:NewTest:Stage01:Stage02:Stage03:Stage04:
+House:City:Terrain:Simple:mcraft:myMap01:NewTest:Stage01:Stage02:Stage03:Stage04:Stage05:
