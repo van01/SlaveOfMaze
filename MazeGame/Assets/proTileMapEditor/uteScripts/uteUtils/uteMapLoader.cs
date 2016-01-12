@@ -281,7 +281,7 @@ public class uteMapLoader : MonoBehaviour {
 		MAP_D.transform.parent = MAP.transform;
 
 		string[] myMapInfoAll = myLatestMap.Split("$"[0]);
-
+		string layerName = string.Empty;
 		for(int i=0;i<myMapInfoAll.Length-1;i++)
 		{
 			#if !UNITY_EDITOR
@@ -298,6 +298,7 @@ public class uteMapLoader : MonoBehaviour {
 			int rY = System.Convert.ToInt32(myMapParts[5]);
 			int rZ = System.Convert.ToInt32(myMapParts[6]);
 			string staticInfo = myMapParts[7];
+			layerName = myMapParts[10];
 			bool isStatic = false;
 
 			if(staticInfo.Equals("1"))
@@ -311,6 +312,7 @@ public class uteMapLoader : MonoBehaviour {
 
 			if(isStatic)
 			{
+				newObj.layer = LayerMask.NameToLayer(layerName);
 				newObj.isStatic = true;
 				newObj.transform.parent = MAP_S.transform;
 			}

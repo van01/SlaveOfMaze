@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 435542}
   - 54: {fileID: 5435310}
-  - 95: {fileID: 9524934}
   - 114: {fileID: 11410238}
   m_Layer: 0
   m_Name: chr_hunter1
@@ -135,23 +134,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &9524934
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135542}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 944b6238aa6254f47b642b2ed7316c2b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11410238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,7 +142,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 135542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6e27a8c5104414fa3373d73a885780, type: 3}
+  m_Script: {fileID: 11500000, guid: 59a6d876f82564eab982529bdcdf9ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &13635542

@@ -3,6 +3,21 @@ using System.Collections;
 
 public class Player : UnitControl {
 
+	static Player m_Instnace = null;
+
+	static public Player GetInstance ()
+	{
+		if (m_Instnace == null) {
+			m_Instnace = GameObject.Find ("Player").GetComponent<Player>();
+		}
+		return m_Instnace;
+	}
+
+	void OnEnable()
+	{
+		m_Instnace = this;
+	}
+
 	// Use this for initialization
 	void Start () {
 		base.Start (eType.Player);

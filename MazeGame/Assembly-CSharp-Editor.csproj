@@ -131,6 +131,22 @@
      <Compile Include="Assets\02.Script\NGUI\Scripts\Editor\UIWidgetContainerEditor.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\Editor\UIWidgetInspector.cs" />
      <Compile Include="Assets\02.Script\NGUI\Scripts\Editor\UIWrapContentEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\AnimationLinkEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\AstarPathEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\AstarUpdateChecker.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\AstarUpdateWindow.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\CustomGraphEditorAttribute.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\EditorGUIx.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\EditorUtilities.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\GraphEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\GridGeneratorEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\NavMeshGeneratorEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\PointGeneratorEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\GraphUpdateSceneEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\Misc\AstarEnumFlagDrawer.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\ModifierEditors\RaycastModifierEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\ModifierEditors\SmoothModifierEditor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Editor\SeekerEditor.cs" />
      <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteCategoryEditor.cs" />
      <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteDocumentation.cs" />
      <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteGiveFeedback.cs" />
@@ -144,6 +160,7 @@
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\02.Script\NGUI\ReadMe - 3.6.6.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Models\Orc\Orc Skin.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Wooden\Arimo14.txt" />
@@ -160,11 +177,13 @@
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\City.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\mcraft.txt" />
      <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteMyPatterns.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage03_info.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage02_info.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\NewTest_layers.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\myMap01.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage05_info.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
@@ -179,12 +198,15 @@
      <None Include="Assets\proTileMapEditor\uteMyPatterns\utemypatternsdirtagdonotdelete.txt" />
      <None Include="Assets\proTileMapEditor\utePatterns\terrain_pattern_1.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\Terrain.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Simple_layers.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\utemapsdirtagdonotdelete.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text 3.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage04_info.txt" />
@@ -194,6 +216,7 @@
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\City_layers.txt" />
+     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\myPattern01_layers.txt" />
      <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteGUIDID.txt" />
@@ -202,8 +225,10 @@
      <None Include="Assets\proTileMapEditor\uteMaps\NewTest.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\mcraft_info.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage01_info.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage02_layers.txt" />
+     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage02.txt" />
      <None Include="Assets\02.Script\NGUI\Resources\Shaders\Unlit - Text.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\myMap01_layers.txt" />
@@ -215,9 +240,11 @@
      <None Include="Assets\proTileMapEditor\uteMaps\Terrain_layers.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage01.txt" />
      <None Include="Assets\proTileMapEditor\uteMaps\Simple.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\JsonFxLicense.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage05.txt" />
      <None Include="Assets\proTileMapEditor\Resources\uteForEditor\uteSettings.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Shaders\Refractive.shader" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage01_layers.txt" />
@@ -229,12 +256,19 @@
      <None Include="Assets\proTileMapEditor\uteMaps\Simple_info.txt" />
      <None Include="Assets\02.Script\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
      <None Include="Assets\02.Script\NGUI\Examples\Resources\Localization.txt" />
+     <None Include="Assets\AstarPathfindingProject\link.xml" />
      <None Include="Assets\proTileMapEditor\uteMaps\Stage05_layers.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Applications/Unity5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>/Users/chokyungsung/Devel/SlaveOfMaze/MazeGame/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.JsonFx">
+ <HintPath>/Users/chokyungsung/Devel/SlaveOfMaze/MazeGame/Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity5/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>

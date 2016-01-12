@@ -80,9 +80,10 @@ public class uteCombineChildren : MonoBehaviour {
 
 		BatchedObjects.Clear();
 		
-		Component[] filters  = GetComponentsInChildren(typeof(MeshFilter));
+		Component[] filters = GetComponentsInChildren(typeof(MeshFilter));
 		Matrix4x4 myTransform = transform.worldToLocalMatrix;
 		List<Hashtable> materialToMesh = new List<Hashtable>();
+		List<int> layerName = new List<int> ();
 		int vertexCalc = 0;
 		int hasIterations = 0;
 		materialToMesh.Add(new Hashtable());
@@ -118,6 +119,17 @@ public class uteCombineChildren : MonoBehaviour {
 					}
 					else
 					{
+						int nLayer = 0;
+						if (filter.transform.parent.name == "STATIC")
+						{
+							nLayer = filter.gameObject.layer;
+						}
+						else
+						{
+							nLayer = filter.transform.parent.gameObject.layer;
+						}
+						layerName.Add (nLayer);
+
 						objects = new ArrayList ();
 						objects.Add(instance);
 						materialToMesh[hasIterations].Add(materials[m], objects);
@@ -228,6 +240,7 @@ public class uteCombineChildren : MonoBehaviour {
 					}
 					else
 					{
+						children[s].layer = layerName[counterpp];
 						children[s].name = "Batch_"+(counterpp++).ToString();
 					}
 				}							

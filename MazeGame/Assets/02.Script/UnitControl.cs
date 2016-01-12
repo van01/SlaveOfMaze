@@ -28,15 +28,9 @@ public abstract class UnitControl : MonoBehaviour {
 	eAniState m_eAniState = eAniState.None;
 	bool m_isControl = false;
 
-	static UnitControl m_Instnace = null;
-	public static UnitControl GetInstance()
-	{
-		return m_Instnace;
-	}
-
 	void OnEnable()
 	{
-		m_Instnace = this;
+
 	}
 
 	Rigidbody m_rigibody;
@@ -45,8 +39,11 @@ public abstract class UnitControl : MonoBehaviour {
 	protected void Start (eType type) {
 		m_eType = type;
 		//m_rigibody = gameObject.GetComponent<Rigidbody> ();
-		m_rigibody = gameObject.AddComponent<Rigidbody> ();
-		m_rigibody.useGravity = true;
+
+		if (eType.Player == type) {
+			m_rigibody = gameObject.AddComponent<Rigidbody> ();
+			m_rigibody.useGravity = true;
+		}
 	}
 	
 	// Update is called once per frame

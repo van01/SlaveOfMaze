@@ -1,0 +1,482 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
+  m_Fog: 0
+  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: .00999999978
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
+  m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
+  m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: .5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_GIWorkflowMode: 0
+  m_LightmapsMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 3
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AOMaxDistance: 1
+    m_Padding: 2
+    m_CompAOExponent: 0
+    m_LightmapParameters: {fileID: 0}
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherRayCount: 1024
+  m_LightmapSnapshot: {fileID: 0}
+  m_RuntimeCPUUsage: 25
+--- !u!196 &5
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentRadius: .5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: .400000006
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    cellSize: .166666672
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &24491372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 24491373}
+  m_Layer: 0
+  m_Name: MAIN_PLATFORM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &24491373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24491372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10000, y: -10000, z: -10000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!1 &322701365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 322701367}
+  - 108: {fileID: 322701366}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &322701366
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322701365}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 1
+  m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &322701367
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322701365}
+  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!1 &514811817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 514811819}
+  - 114: {fileID: 514811818}
+  m_Layer: 0
+  m_Name: AStar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &514811818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 514811817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astarData:
+    dataString: UEsDBBQAAAgIAABIIexNgUtC7gEAAM8DAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFdUstu2zAQ/JWCZyeQVCmBfUvtxC2QNkbcomeaWlkLU6TAR/0I/O9dUrJs5SLDO7Ozs7P8YFuPJZt9sH9cemAzxh8gSR6rTFR5kUyn+Z0ocrHh+bTIvhYP6WPFzhPGbQvCvXOHms3SCUOrG3AGxZPaSlJJJswrrLRpnsstzLV1ls0qLi1MmNEu9Kkw9BCpx/g90ZekBSgH5gLeFxG+S3vCfXEO0kLypoVyjSfomWnSCdEvMZQuoQPJnNBSou0numMbtpzz1npyOmElcrIeJhK1BtzWjs2ym663qrLgokXDjws0tHkUY9+0q0mh4XZ3k2CRZueL0s8xlCZZTlhldPO9nxR9uxrF7p0fBbduyOm2uLg16dWeyx3fSPhbg/qll0Z7RTd0xlObt5AtBpFhi3kNYnfhdOZGJd+O7pH29ziH9Q5zic0mpJ9f/z4d0EYeFdZSh1Sn1AuGov9BVuONbdSjWrDwx8Jvvr0+hL78gsY6AqIY906/ototDZZX5qW6QOtescGYG105rLHR3hCTPcc8aWPv5tooCMVutRYUl+64omlufM9PyDDvU/2FC6e77Hukf+ZjeiwO3CQZAyu97++HilS5XHVgNELxqYtdRaemfUICX5aGt+GJlYbvl3hq9LAUqkqvhQFQb7E3Wjn/B1BLAwQUAAAIAAAASCHsHn9ddjIAAAAyAAAAEgAkAGdyYXBoMF9lZGl0b3IuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAXsibG9ja2VkIjp0cnVlLCJzaG93RXh0cmEiOmZhbHNlLCJwaXZvdCI6IkNlbnRlciJ9UEsDBBQAAAgIAABIIeyDDJ2UdgAAAIMAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BHYw9D4MgFAD/y5stQQUJrh3cTHfj8MqHvqFgEJuYpv+90u2Gu/vA26WdYoAeWqaYgAqWhNu6Q19feJC9aALsHOfKN8YLybUWNyOFeaLQsmllVysPcwX53NyIL/cvHphXT8FSWNiQyA7lWqwQrbvHI+Si8fn7A1BLAQItABQAAAgIAABIIexNgUtC7gEAAM8DAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgAAABIIewef112MgAAADIAAAASACQAAAAAAAAAAAAAADsCAABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAASCHsgwydlHYAAACDAAAACQAkAAAAAAAAAAAAAADBAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAADAAMAHAEAAIIDAAAAAA==
+    upgradeData: 
+    data_backup: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: .300000012
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _NodeConnection: {r: 1, g: 1, b: 1, a: .899999976}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: .5}
+    _BoundsHandles: {r: .289999992, g: .453999996, b: .740999997, a: .899999976}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: .5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: .5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: .5}
+    _MeshColor: {r: .125, g: .68599999, b: 0, a: .189999998}
+    _AreaColors: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 0
+  maxFrameTime: 1
+  minAreaSize: 0
+  limitGraphUpdates: 1
+  maxGraphUpdateFreq: .200000003
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+  lastUniqueAreaIndex: 0
+--- !u!4 &514811819
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 514811817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.55567694, y: .0370006561, z: -6.15054512}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+--- !u!1 &1182714493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1182714498}
+  - 20: {fileID: 1182714497}
+  - 92: {fileID: 1182714496}
+  - 124: {fileID: 1182714495}
+  - 81: {fileID: 1182714494}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1182714494
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182714493}
+  m_Enabled: 1
+--- !u!124 &1182714495
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182714493}
+  m_Enabled: 1
+--- !u!92 &1182714496
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182714493}
+  m_Enabled: 1
+--- !u!20 &1182714497
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182714493}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967263
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!4 &1182714498
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182714493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!1 &2060391271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2060391273}
+  - 114: {fileID: 2060391272}
+  - 114: {fileID: 2060391274}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2060391272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060391271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9a336eab6ec42749ccf1ffd6b8efa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_nMaxStage: 4
+  m_nStage: 1
+  m_AstarPath: {fileID: 514811818}
+--- !u!4 &2060391273
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060391271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.11854029, y: -2.45163059, z: -10.0310059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &2060391274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060391271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214a9bf174e324fba82ca1e89a04cb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadAuto: 0
+  StaticBatching: 1
+  AddMeshColliders: 1
+  RemoveLeftovers: 1
+  PrepareForLightmapping: 0
+  MapOffset: {x: 0, y: 0, z: 0}
+  MapScale: {x: 1, y: 1, z: 1}
+  refTiles:
+  - {fileID: 100000, guid: 9011f67887c784123b6958e00ab35a46, type: 2}
+  - {fileID: 100000, guid: d6b15c8e3aee1463297d69dffce4a3bb, type: 2}
+  - {fileID: 100000, guid: fcd70945c5bfa4c0bb3f8e8a53c3d931, type: 2}
+  - {fileID: 100000, guid: 502782fbfaaff4ec2803fb794672cc60, type: 2}
+  - {fileID: 100000, guid: 0482d3f2ab9174653b5aaab2d6fcac22, type: 2}
+  - {fileID: 100000, guid: faac000371cef4a66815e41b1207128c, type: 2}
+  - {fileID: 100000, guid: 69a0f270eb01a4136b821419ef0f881f, type: 2}
+  - {fileID: 100000, guid: f81a0fd978d444fdc9e92da2b55babf7, type: 2}
+  - {fileID: 100000, guid: 63a72362b93cc4bea8e30c6bb65c2d70, type: 2}
+  - {fileID: 100000, guid: fe469c4b03f804b7c9aee433ce9a5780, type: 2}
+  - {fileID: 100002, guid: 91b15a0430d3f4354a36b024487621fc, type: 2}
+  - {fileID: 100000, guid: a896b013fc0d144eb96e3c97d1c7a954, type: 2}
+  - {fileID: 100000, guid: 96ba02a04725d493282fff93cadf7607, type: 2}
+  - {fileID: 100000, guid: 5b4a3b01a9b6e4f16b7fe6cf802b8ac7, type: 2}
+  - {fileID: 100004, guid: 949daf0f99c624378aa4f14f29080af7, type: 2}
+  - {fileID: 100000, guid: ca516ec5ee1f64427987d6a6d10cfeae, type: 2}
+  - {fileID: 190224, guid: d8d4d16d053f34386891ac2199f8d75f, type: 2}
+  - {fileID: 100000, guid: ca719e49f495b48038f53ba57fc58f8a, type: 2}
+  - {fileID: 100000, guid: c3b2c1c5764a34c4ead7f096197fda4a, type: 2}
+  - {fileID: 100000, guid: 080927b1238584f79810989898927692, type: 2}
+  - {fileID: 100000, guid: f5917efaa9d974582b555c03d1c1edec, type: 2}
+  - {fileID: 100000, guid: 994cd8dcc3c094ea7a9eb6589fc94e7e, type: 2}
+  - {fileID: 100000, guid: b0912508942334b13893fa25f6dcd3d0, type: 2}
+  - {fileID: 100000, guid: e6d2f136d93554406bef309f83e18bd8, type: 2}
+  - {fileID: 100000, guid: 7eceb9bccbeba4977ae2d036d090937d, type: 2}
+  - {fileID: 100000, guid: 7fdbcf08978ed448ba40e1f64aadff76, type: 2}
+  - {fileID: 100000, guid: 58a62874aa83544149b55875a6a9997c, type: 2}
+  - {fileID: 100002, guid: 2da26bf1f7dc3404b88fe45e1403b9b2, type: 2}
+  - {fileID: 100002, guid: 1326f0969635d421999861b790abe27f, type: 2}
+  - {fileID: 191996, guid: a70cf6be6ec7c44c3ad287ca8f018c9d, type: 2}
+  - {fileID: 100000, guid: e19de07c2b86b468e85c6415797a2b51, type: 2}
+  - {fileID: 100000, guid: 533f74187177148bfbb5604b78a35c87, type: 2}
+  - {fileID: 100000, guid: 77f4733891bc14dae96cf8274b0e3033, type: 2}
+  - {fileID: 100000, guid: b5b773e9865b34679a37d75bdb9e3f5a, type: 2}
+  - {fileID: 100000, guid: 3f82d38a2ab0f47fd8096ed471e6db24, type: 2}
+  - {fileID: 100000, guid: 5176633dcd1084b488e5a8fb0a5b1801, type: 2}
+  - {fileID: 100000, guid: b197ac3548a874268a1b320ab8ca22b4, type: 2}
+  - {fileID: 100000, guid: 0cbe1f1f12b9a458791b8df71a2a3ce4, type: 2}
+  mapName: House
+  isMapLoaded: 0
+  currentOptimizationLevelIndex: 0
+  myLatestMap: 0:508:0.007001119:506:0:0:0:1:0:-:Ground:$0:508:0.007001119:505:0:0:0:1:0:-:Ground:$0:508:0.007001119:504:0:0:0:1:0:-:Ground:$0:508:0.007001119:503:0:0:0:1:0:-:Ground:$0:508:0.007001119:502:0:0:0:1:0:-:Ground:$0:508:0.007001119:501:0:0:0:1:0:-:Ground:$0:507:0.007001119:506:0:0:0:1:0:-:Ground:$0:507:0.007001119:505:0:0:0:1:0:-:Ground:$0:507:0.007001119:504:0:0:0:1:0:-:Ground:$0:507:0.007001119:503:0:0:0:1:0:-:Ground:$0:507:0.007001119:502:0:0:0:1:0:-:Ground:$0:507:0.007001119:501:0:0:0:1:0:-:Ground:$0:506:0.007001119:506:0:0:0:1:0:-:Ground:$0:506:0.007001119:505:0:0:0:1:0:-:Ground:$0:506:0.007001119:504:0:0:0:1:0:-:Ground:$0:506:0.007001119:503:0:0:0:1:0:-:Ground:$0:506:0.007001119:502:0:0:0:1:0:-:Ground:$0:506:0.007001119:501:0:0:0:1:0:-:Ground:$0:505:0.007001119:506:0:0:0:1:0:-:Ground:$0:505:0.007001119:505:0:0:0:1:0:-:Ground:$0:505:0.007001119:504:0:0:0:1:0:-:Ground:$0:505:0.007001119:503:0:0:0:1:0:-:Ground:$0:505:0.007001119:502:0:0:0:1:0:-:Ground:$0:505:0.007001119:501:0:0:0:1:0:-:Ground:$0:504:0.007001119:506:0:0:0:1:0:-:Ground:$0:504:0.007001119:505:0:0:0:1:0:-:Ground:$0:504:0.007001119:504:0:0:0:1:0:-:Ground:$0:504:0.007001119:503:0:0:0:1:0:-:Ground:$0:504:0.007001119:502:0:0:0:1:0:-:Ground:$0:504:0.007001119:501:0:0:0:1:0:-:Ground:$0:503:0.007001119:506:0:0:0:1:0:-:Ground:$0:503:0.007001119:505:0:0:0:1:0:-:Ground:$0:503:0.007001119:504:0:0:0:1:0:-:Ground:$0:503:0.007001119:503:0:0:0:1:0:-:Ground:$0:503:0.007001119:502:0:0:0:1:0:-:Ground:$0:503:0.007001119:501:0:0:0:1:0:-:Ground:$0:502:0.007001119:506:0:0:0:1:0:-:Ground:$0:502:0.007001119:505:0:0:0:1:0:-:Ground:$0:502:0.007001119:504:0:0:0:1:0:-:Ground:$0:502:0.007001119:503:0:0:0:1:0:-:Ground:$0:502:0.007001119:502:0:0:0:1:0:-:Ground:$0:502:0.007001119:501:0:0:0:1:0:-:Ground:$0:501:0.007001119:506:0:0:0:1:0:-:Ground:$0:501:0.007001119:505:0:0:0:1:0:-:Ground:$0:501:0.007001119:504:0:0:0:1:0:-:Ground:$0:501:0.007001119:503:0:0:0:1:0:-:Ground:$0:501:0.007001119:502:0:0:0:1:0:-:Ground:$0:501:0.007001119:501:0:0:0:1:0:-:Ground:$0:500:0.007001119:506:0:0:0:1:0:-:Ground:$0:500:0.007001119:505:0:0:0:1:0:-:Ground:$0:500:0.007001119:504:0:0:0:1:0:-:Ground:$0:500:0.007001119:503:0:0:0:1:0:-:Ground:$0:500:0.007001119:502:0:0:0:1:0:-:Ground:$0:500:0.007001119:501:0:0:0:1:0:-:Ground:$0:499:0.007001119:506:0:0:0:1:0:-:Ground:$0:499:0.007001119:505:0:0:0:1:0:-:Ground:$0:499:0.007001119:504:0:0:0:1:0:-:Ground:$0:499:0.007001119:503:0:0:0:1:0:-:Ground:$0:499:0.007001119:502:0:0:0:1:0:-:Ground:$0:499:0.007001119:501:0:0:0:1:0:-:Ground:$0:498:0.007001119:506:0:0:0:1:0:-:Ground:$0:498:0.007001119:505:0:0:0:1:0:-:Ground:$0:498:0.007001119:504:0:0:0:1:0:-:Ground:$0:498:0.007001119:503:0:0:0:1:0:-:Ground:$0:498:0.007001119:502:0:0:0:1:0:-:Ground:$0:498:0.007001119:501:0:0:0:1:0:-:Ground:$1:496:0.007001119:506:0:0:0:1:0:-:Ground:$1:496:0.007001119:505:0:0:0:1:0:-:Ground:$1:496:0.007001119:504:0:0:0:1:0:-:Ground:$1:496:0.007001119:503:0:0:0:1:0:-:Ground:$1:496:0.007001119:502:0:0:0:1:0:-:Ground:$1:496:0.007001119:501:0:0:0:1:0:-:Ground:$1:496:0.007001119:500:0:0:0:1:0:-:Ground:$1:496:0.007001119:499:0:0:0:1:0:-:Ground:$1:496:0.007001119:498:0:0:0:1:0:-:Ground:$1:496:0.007001119:497:0:0:0:1:0:-:Ground:$1:496:0.007001119:496:0:0:0:1:0:-:Ground:$1:495:0.007001119:506:0:0:0:1:0:-:Ground:$1:495:0.007001119:505:0:0:0:1:0:-:Ground:$1:495:0.007001119:504:0:0:0:1:0:-:Ground:$1:495:0.007001119:503:0:0:0:1:0:-:Ground:$1:495:0.007001119:502:0:0:0:1:0:-:Ground:$1:495:0.007001119:501:0:0:0:1:0:-:Ground:$1:495:0.007001119:500:0:0:0:1:0:-:Ground:$1:495:0.007001119:499:0:0:0:1:0:-:Ground:$1:495:0.007001119:498:0:0:0:1:0:-:Ground:$1:495:0.007001119:497:0:0:0:1:0:-:Ground:$1:495:0.007001119:496:0:0:0:1:0:-:Ground:$1:494:0.007001119:506:0:0:0:1:0:-:Ground:$1:494:0.007001119:505:0:0:0:1:0:-:Ground:$1:494:0.007001119:504:0:0:0:1:0:-:Ground:$1:494:0.007001119:503:0:0:0:1:0:-:Ground:$1:494:0.007001119:502:0:0:0:1:0:-:Ground:$1:494:0.007001119:501:0:0:0:1:0:-:Ground:$1:494:0.007001119:500:0:0:0:1:0:-:Ground:$1:494:0.007001119:499:0:0:0:1:0:-:Ground:$1:494:0.007001119:498:0:0:0:1:0:-:Ground:$1:494:0.007001119:497:0:0:0:1:0:-:Ground:$1:494:0.007001119:496:0:0:0:1:0:-:Ground:$1:493:0.007001119:506:0:0:0:1:0:-:Ground:$1:493:0.007001119:505:0:0:0:1:0:-:Ground:$1:493:0.007001119:504:0:0:0:1:0:-:Ground:$1:493:0.007001119:503:0:0:0:1:0:-:Ground:$1:493:0.007001119:502:0:0:0:1:0:-:Ground:$1:493:0.007001119:501:0:0:0:1:0:-:Ground:$1:493:0.007001119:500:0:0:0:1:0:-:Ground:$1:493:0.007001119:499:0:0:0:1:0:-:Ground:$1:493:0.007001119:498:0:0:0:1:0:-:Ground:$1:493:0.007001119:497:0:0:0:1:0:-:Ground:$1:493:0.007001119:496:0:0:0:1:0:-:Ground:$1:492:0.007001119:506:0:0:0:1:0:-:Ground:$1:492:0.007001119:505:0:0:0:1:0:-:Ground:$1:492:0.007001119:504:0:0:0:1:0:-:Ground:$1:492:0.007001119:503:0:0:0:1:0:-:Ground:$1:492:0.007001119:502:0:0:0:1:0:-:Ground:$1:492:0.007001119:501:0:0:0:1:0:-:Ground:$1:492:0.007001119:500:0:0:0:1:0:-:Ground:$1:492:0.007001119:499:0:0:0:1:0:-:Ground:$1:492:0.007001119:498:0:0:0:1:0:-:Ground:$1:492:0.007001119:497:0:0:0:1:0:-:Ground:$1:492:0.007001119:496:0:0:0:1:0:-:Ground:$1:491:0.007001119:506:0:0:0:1:0:-:Ground:$1:491:0.007001119:505:0:0:0:1:0:-:Ground:$1:491:0.007001119:504:0:0:0:1:0:-:Ground:$1:491:0.007001119:503:0:0:0:1:0:-:Ground:$1:491:0.007001119:502:0:0:0:1:0:-:Ground:$1:491:0.007001119:501:0:0:0:1:0:-:Ground:$1:491:0.007001119:500:0:0:0:1:0:-:Ground:$1:491:0.007001119:499:0:0:0:1:0:-:Ground:$1:491:0.007001119:498:0:0:0:1:0:-:Ground:$1:491:0.007001119:497:0:0:0:1:0:-:Ground:$1:491:0.007001119:496:0:0:0:1:0:-:Ground:$2:497:0.007001119:506:0:90:0:1:0:-:Ground:$2:497:0.007001119:505:0:90:0:1:0:-:Ground:$2:497:0.007001119:504:0:90:0:1:0:-:Ground:$2:497:0.007001119:503:0:90:0:1:0:-:Ground:$2:497:0.007001119:502:0:90:0:1:0:-:Ground:$2:497:0.007001119:501:0:90:0:1:0:-:Ground:$3:496:0.007001119:507:0:0:0:1:0:-:Ground:$3:495:0.007001119:507:0:0:0:1:0:-:Ground:$3:494:0.007001119:507:0:0:0:1:0:-:Ground:$3:493:0.007001119:507:0:0:0:1:0:-:Ground:$3:492:0.007001119:507:0:0:0:1:0:-:Ground:$3:491:0.007001119:507:0:0:0:1:0:-:Ground:$3:490:0.007001119:506:0:270:0:1:0:-:Ground:$3:490:0.007001119:505:0:270:0:1:0:-:Ground:$3:490:0.007001119:504:0:270:0:1:0:-:Ground:$3:490:0.007001119:503:0:270:0:1:0:-:Ground:$3:490:0.007001119:502:0:270:0:1:0:-:Ground:$3:490:0.007001119:501:0:270:0:1:0:-:Ground:$3:490:0.007001119:500:0:270:0:1:0:-:Ground:$3:490:0.007001119:499:0:270:0:1:0:-:Ground:$3:490:0.007001119:498:0:270:0:1:0:-:Ground:$3:490:0.007001119:497:0:270:0:1:0:-:Ground:$3:490:0.007001119:496:0:270:0:1:0:-:Ground:$3:491:0.007001119:495:0:180:0:1:0:-:Ground:$3:492:0.007001119:495:0:180:0:1:0:-:Ground:$3:493:0.007001119:495:0:180:0:1:0:-:Ground:$3:494:0.007001119:495:0:180:0:1:0:-:Ground:$3:495:0.007001119:495:0:180:0:1:0:-:Ground:$3:496:0.007001119:495:0:180:0:1:0:-:Ground:$3:497:0.007001119:496:0:90:0:1:0:-:Ground:$3:497:0.007001119:497:0:90:0:1:0:-:Ground:$3:497:0.007001119:498:0:90:0:1:0:-:Ground:$3:497:0.007001119:499:0:90:0:1:0:-:Ground:$4:497:0.007001119:500:0:90:0:1:0:-:Ground:$5:497:0.007001119:495:0:90:0:1:0:-:Ground:$5:490:0.007001119:495:0:180:0:1:0:-:Ground:$5:490:0.007001119:507:0:270:0:1:0:-:Ground:$6:497:0.007001119:507:0:270:0:1:0:-:Ground:$7:498:0.007001119:507:0:0:0:1:0:-:Ground:$7:499:0.007001119:507:0:0:0:1:0:-:Ground:$7:500:0.007001119:507:0:0:0:1:0:-:Ground:$7:501:0.007001119:507:0:0:0:1:0:-:Ground:$7:502:0.007001119:507:0:0:0:1:0:-:Ground:$7:503:0.007001119:507:0:0:0:1:0:-:Ground:$7:504:0.007001119:507:0:0:0:1:0:-:Ground:$7:505:0.007001119:507:0:0:0:1:0:-:Ground:$7:506:0.007001119:507:0:0:0:1:0:-:Ground:$7:507:0.007001119:507:0:0:0:1:0:-:Ground:$7:508:0.007001119:507:0:0:0:1:0:-:Ground:$7:508:0.007001119:500:0:180:0:1:0:-:Ground:$7:507:0.007001119:500:0:180:0:1:0:-:Ground:$7:506:0.007001119:500:0:180:0:1:0:-:Ground:$7:505:0.007001119:500:0:180:0:1:0:-:Ground:$7:504:0.007001119:500:0:180:0:1:0:-:Ground:$7:503:0.007001119:500:0:180:0:1:0:-:Ground:$7:502:0.007001119:500:0:180:0:1:0:-:Ground:$7:501:0.007001119:500:0:180:0:1:0:-:Ground:$7:500:0.007001119:500:0:180:0:1:0:-:Ground:$7:499:0.007001119:500:0:180:0:1:0:-:Ground:$7:498:0.007001119:500:0:180:0:1:0:-:Ground:$7:509:0.007001119:506:0:90:0:1:0:-:Ground:$7:509:0.007001119:505:0:90:0:1:0:-:Ground:$7:509:0.007001119:504:0:90:0:1:0:-:Ground:$7:509:0.007001119:503:0:90:0:1:0:-:Ground:$7:509:0.007001119:502:0:90:0:1:0:-:Ground:$7:509:0.007001119:501:0:90:0:1:0:-:Ground:$8:509:0.007001119:507:0:180:0:1:0:-:Ground:$8:509:0.007001119:500:0:270:0:1:0:-:Ground:$9:498:1.007002:507:0:90:0:1:0:-:Walls:$9:500:1.007002:507:0:90:0:1:0:-:Walls:$9:502:1.007002:507:0:90:0:1:0:-:Walls:$9:504:1.007002:507:0:90:0:1:0:-:Walls:$9:506:1.007002:507:0:90:0:1:0:-:Walls:$9:508:1.007002:507:0:90:0:1:0:-:Walls:$9:508:1.007002:500:0:90:0:1:0:-:Walls:$9:506:1.007002:500:0:90:0:1:0:-:Walls:$9:504:1.007002:500:0:90:0:1:0:-:Walls:$9:502:1.007002:500:0:90:0:1:0:-:Walls:$9:500:1.007002:500:0:90:0:1:0:-:Walls:$9:498:1.007002:500:0:90:0:1:0:-:Walls:$9:497:1.007002:499:0:180:0:1:0:-:Walls:$9:497:1.007002:497:0:180:0:1:0:-:Walls:$9:496:1.007002:495:0:270:0:1:0:-:Walls:$9:491:1.007002:495:0:270:0:1:0:-:Walls:$9:490:1.007002:496:0:0:0:1:0:-:Walls:$9:490:1.007002:499:0:0:0:1:0:-:Walls:$9:490:1.007002:502:0:0:0:1:0:-:Walls:$9:490:1.007002:505:0:0:0:1:0:-:Walls:$9:496:1.007002:507:0:90:0:1:0:-:Walls:$9:494:1.007002:507:0:90:0:1:0:-:Walls:$9:492:1.007002:507:0:90:0:1:0:-:Walls:$10:495:1.007002:507:0:90:0:1:0:-:Walls:$10:499:1.007002:507:0:90:0:1:0:-:Walls:$10:501:1.007002:507:0:90:0:1:0:-:Walls:$10:503:1.007002:507:0:90:0:1:0:-:Walls:$10:505:1.007002:507:0:90:0:1:0:-:Walls:$10:507:1.007002:507:0:90:0:1:0:-:Walls:$10:509:1.007002:506:0:180:0:1:0:-:Walls:$10:509:1.007002:505:0:180:0:1:0:-:Walls:$10:509:1.007002:504:0:180:0:1:0:-:Walls:$10:509:1.007002:503:0:180:0:1:0:-:Walls:$10:509:1.007002:502:0:180:0:1:0:-:Walls:$10:509:1.007002:501:0:180:0:1:0:-:Walls:$10:507:1.007002:500:0:270:0:1:0:-:Walls:$10:505:1.007002:500:0:270:0:1:0:-:Walls:$10:503:1.007002:500:0:270:0:1:0:-:Walls:$10:501:1.007002:500:0:270:0:1:0:-:Walls:$10:499:1.007002:500:0:270:0:1:0:-:Walls:$10:497:1.007002:498:0:180:0:1:0:-:Walls:$10:497:1.007002:496:0:180:0:1:0:-:Walls:$10:495:1.007002:495:0:270:0:1:0:-:Walls:$10:494:1.007002:495:0:270:0:1:0:-:Walls:$10:492:1.007002:495:0:270:0:1:0:-:Walls:$10:490:1.007002:497:0:0:0:1:0:-:Walls:$10:490:1.007002:498:0:0:0:1:0:-:Walls:$10:490:1.007002:500:0:0:0:1:0:-:Walls:$10:490:1.007002:501:0:0:0:1:0:-:Walls:$10:490:1.007002:503:0:0:0:1:0:-:Walls:$10:490:1.007002:504:0:0:0:1:0:-:Walls:$10:490:1.007002:506:0:0:0:1:0:-:Walls:$10:491:1.007002:507:0:90:0:1:0:-:Walls:$10:493:1.007002:507:0:90:0:1:0:-:Walls:$11:497:1.007002:507:0:270:0:1:0:-:Walls:$11:497:1.007002:500:0:180:0:1:0:-:Walls:$12:509:1.007002:507:0:270:0:1:0:-:Walls:$12:509:1.007002:500:0:0:0:1:0:-:Walls:$12:497:1.007002:495:0:0:0:1:0:-:Walls:$12:490:1.007002:495:0:90:0:1:0:-:Walls:$12:490:1.007002:507:0:180:0:1:0:-:Walls:$13:497:1.007002:506:0:0:0:1:0:-:Walls:$14:497:1.007002:502:0:0:0:1:0:-:Walls:$9:497:1.007002:503:0:0:0:1:0:-:Walls:$9:497:1.007002:501:0:0:0:1:0:-:Walls:$14:493:1.007002:495:0:90:0:1:0:-:Walls:$15:498:0.007001119:499:0:0:0:1:0:-:Ground:$15:498:0.007001119:498:0:0:0:1:0:-:Ground:$15:498:0.007001119:497:0:0:0:1:0:-:Ground:$15:498:0.007001119:496:0:0:0:1:0:-:Ground:$15:498:0.007001119:495:0:0:0:1:0:-:Ground:$15:498:0.007001119:494:0:0:0:1:0:-:Ground:$15:498:0.007001119:493:0:0:0:1:0:-:Ground:$15:498:0.007001119:492:0:0:0:1:0:-:Ground:$15:498:0.007001119:491:0:0:0:1:0:-:Ground:$15:498:0.007001119:490:0:0:0:1:0:-:Ground:$15:498:0.007001119:489:0:0:0:1:0:-:Ground:$15:498:0.007001119:488:0:0:0:1:0:-:Ground:$15:498:0.007001119:487:0:0:0:1:0:-:Ground:$15:498:0.007001119:486:0:0:0:1:0:-:Ground:$15:498:0.007001119:485:0:0:0:1:0:-:Ground:$15:498:0.007001119:484:0:0:0:1:0:-:Ground:$15:498:0.007001119:483:0:0:0:1:0:-:Ground:$15:498:0.007001119:482:0:0:0:1:0:-:Ground:$15:499:0.007001119:499:0:0:0:1:0:-:Ground:$15:499:0.007001119:498:0:0:0:1:0:-:Ground:$15:499:0.007001119:497:0:0:0:1:0:-:Ground:$15:499:0.007001119:496:0:0:0:1:0:-:Ground:$15:499:0.007001119:495:0:0:0:1:0:-:Ground:$15:499:0.007001119:494:0:0:0:1:0:-:Ground:$15:499:0.007001119:493:0:0:0:1:0:-:Ground:$15:499:0.007001119:492:0:0:0:1:0:-:Ground:$15:499:0.007001119:491:0:0:0:1:0:-:Ground:$15:499:0.007001119:490:0:0:0:1:0:-:Ground:$15:499:0.007001119:489:0:0:0:1:0:-:Ground:$15:499:0.007001119:488:0:0:0:1:0:-:Ground:$15:499:0.007001119:487:0:0:0:1:0:-:Ground:$15:499:0.007001119:486:0:0:0:1:0:-:Ground:$15:499:0.007001119:485:0:0:0:1:0:-:Ground:$15:499:0.007001119:484:0:0:0:1:0:-:Ground:$15:499:0.007001119:483:0:0:0:1:0:-:Ground:$15:499:0.007001119:482:0:0:0:1:0:-:Ground:$15:500:0.007001119:499:0:0:0:1:0:-:Ground:$15:500:0.007001119:498:0:0:0:1:0:-:Ground:$15:500:0.007001119:497:0:0:0:1:0:-:Ground:$15:500:0.007001119:496:0:0:0:1:0:-:Ground:$15:500:0.007001119:495:0:0:0:1:0:-:Ground:$15:500:0.007001119:494:0:0:0:1:0:-:Ground:$15:500:0.007001119:493:0:0:0:1:0:-:Ground:$15:500:0.007001119:492:0:0:0:1:0:-:Ground:$15:500:0.007001119:491:0:0:0:1:0:-:Ground:$15:500:0.007001119:490:0:0:0:1:0:-:Ground:$15:500:0.007001119:489:0:0:0:1:0:-:Ground:$15:500:0.007001119:488:0:0:0:1:0:-:Ground:$15:500:0.007001119:487:0:0:0:1:0:-:Ground:$15:500:0.007001119:486:0:0:0:1:0:-:Ground:$15:500:0.007001119:485:0:0:0:1:0:-:Ground:$15:500:0.007001119:484:0:0:0:1:0:-:Ground:$15:500:0.007001119:483:0:0:0:1:0:-:Ground:$15:500:0.007001119:482:0:0:0:1:0:-:Ground:$15:501:0.007001119:499:0:0:0:1:0:-:Ground:$15:501:0.007001119:498:0:0:0:1:0:-:Ground:$15:501:0.007001119:497:0:0:0:1:0:-:Ground:$15:501:0.007001119:496:0:0:0:1:0:-:Ground:$15:501:0.007001119:495:0:0:0:1:0:-:Ground:$15:501:0.007001119:494:0:0:0:1:0:-:Ground:$15:501:0.007001119:493:0:0:0:1:0:-:Ground:$15:501:0.007001119:492:0:0:0:1:0:-:Ground:$15:501:0.007001119:491:0:0:0:1:0:-:Ground:$15:501:0.007001119:490:0:0:0:1:0:-:Ground:$15:501:0.007001119:489:0:0:0:1:0:-:Ground:$15:501:0.007001119:488:0:0:0:1:0:-:Ground:$15:501:0.007001119:487:0:0:0:1:0:-:Ground:$15:501:0.007001119:486:0:0:0:1:0:-:Ground:$15:501:0.007001119:485:0:0:0:1:0:-:Ground:$15:501:0.007001119:484:0:0:0:1:0:-:Ground:$15:501:0.007001119:483:0:0:0:1:0:-:Ground:$15:501:0.007001119:482:0:0:0:1:0:-:Ground:$15:502:0.007001119:499:0:0:0:1:0:-:Ground:$15:502:0.007001119:498:0:0:0:1:0:-:Ground:$15:502:0.007001119:497:0:0:0:1:0:-:Ground:$15:502:0.007001119:496:0:0:0:1:0:-:Ground:$15:502:0.007001119:495:0:0:0:1:0:-:Ground:$15:502:0.007001119:494:0:0:0:1:0:-:Ground:$15:502:0.007001119:493:0:0:0:1:0:-:Ground:$15:502:0.007001119:492:0:0:0:1:0:-:Ground:$15:502:0.007001119:491:0:0:0:1:0:-:Ground:$15:502:0.007001119:490:0:0:0:1:0:-:Ground:$15:502:0.007001119:489:0:0:0:1:0:-:Ground:$15:502:0.007001119:488:0:0:0:1:0:-:Ground:$15:502:0.007001119:487:0:0:0:1:0:-:Ground:$15:502:0.007001119:486:0:0:0:1:0:-:Ground:$15:502:0.007001119:485:0:0:0:1:0:-:Ground:$15:502:0.007001119:484:0:0:0:1:0:-:Ground:$15:502:0.007001119:483:0:0:0:1:0:-:Ground:$15:502:0.007001119:482:0:0:0:1:0:-:Ground:$15:503:0.007001119:499:0:0:0:1:0:-:Ground:$15:503:0.007001119:498:0:0:0:1:0:-:Ground:$15:503:0.007001119:497:0:0:0:1:0:-:Ground:$15:503:0.007001119:496:0:0:0:1:0:-:Ground:$15:503:0.007001119:495:0:0:0:1:0:-:Ground:$15:503:0.007001119:494:0:0:0:1:0:-:Ground:$15:503:0.007001119:493:0:0:0:1:0:-:Ground:$15:503:0.007001119:492:0:0:0:1:0:-:Ground:$15:503:0.007001119:491:0:0:0:1:0:-:Ground:$15:503:0.007001119:490:0:0:0:1:0:-:Ground:$15:503:0.007001119:489:0:0:0:1:0:-:Ground:$15:503:0.007001119:488:0:0:0:1:0:-:Ground:$15:503:0.007001119:487:0:0:0:1:0:-:Ground:$15:503:0.007001119:486:0:0:0:1:0:-:Ground:$15:503:0.007001119:485:0:0:0:1:0:-:Ground:$15:503:0.007001119:484:0:0:0:1:0:-:Ground:$15:503:0.007001119:483:0:0:0:1:0:-:Ground:$15:503:0.007001119:482:0:0:0:1:0:-:Ground:$15:504:0.007001119:499:0:0:0:1:0:-:Ground:$15:504:0.007001119:498:0:0:0:1:0:-:Ground:$15:504:0.007001119:497:0:0:0:1:0:-:Ground:$15:504:0.007001119:496:0:0:0:1:0:-:Ground:$15:504:0.007001119:495:0:0:0:1:0:-:Ground:$15:504:0.007001119:494:0:0:0:1:0:-:Ground:$15:504:0.007001119:493:0:0:0:1:0:-:Ground:$15:504:0.007001119:492:0:0:0:1:0:-:Ground:$15:504:0.007001119:491:0:0:0:1:0:-:Ground:$15:504:0.007001119:490:0:0:0:1:0:-:Ground:$15:504:0.007001119:489:0:0:0:1:0:-:Ground:$15:504:0.007001119:488:0:0:0:1:0:-:Ground:$15:504:0.007001119:487:0:0:0:1:0:-:Ground:$15:504:0.007001119:486:0:0:0:1:0:-:Ground:$15:504:0.007001119:485:0:0:0:1:0:-:Ground:$15:504:0.007001119:484:0:0:0:1:0:-:Ground:$15:504:0.007001119:483:0:0:0:1:0:-:Ground:$15:504:0.007001119:482:0:0:0:1:0:-:Ground:$15:505:0.007001119:499:0:0:0:1:0:-:Ground:$15:505:0.007001119:498:0:0:0:1:0:-:Ground:$15:505:0.007001119:497:0:0:0:1:0:-:Ground:$15:505:0.007001119:496:0:0:0:1:0:-:Ground:$15:505:0.007001119:495:0:0:0:1:0:-:Ground:$15:505:0.007001119:494:0:0:0:1:0:-:Ground:$15:505:0.007001119:493:0:0:0:1:0:-:Ground:$15:505:0.007001119:492:0:0:0:1:0:-:Ground:$15:505:0.007001119:491:0:0:0:1:0:-:Ground:$15:505:0.007001119:490:0:0:0:1:0:-:Ground:$15:505:0.007001119:489:0:0:0:1:0:-:Ground:$15:505:0.007001119:488:0:0:0:1:0:-:Ground:$15:505:0.007001119:487:0:0:0:1:0:-:Ground:$15:505:0.007001119:486:0:0:0:1:0:-:Ground:$15:505:0.007001119:485:0:0:0:1:0:-:Ground:$15:505:0.007001119:484:0:0:0:1:0:-:Ground:$15:505:0.007001119:483:0:0:0:1:0:-:Ground:$15:505:0.007001119:482:0:0:0:1:0:-:Ground:$15:506:0.007001119:499:0:0:0:1:0:-:Ground:$15:506:0.007001119:498:0:0:0:1:0:-:Ground:$15:506:0.007001119:497:0:0:0:1:0:-:Ground:$15:506:0.007001119:496:0:0:0:1:0:-:Ground:$15:506:0.007001119:495:0:0:0:1:0:-:Ground:$15:506:0.007001119:494:0:0:0:1:0:-:Ground:$15:506:0.007001119:493:0:0:0:1:0:-:Ground:$15:506:0.007001119:492:0:0:0:1:0:-:Ground:$15:506:0.007001119:491:0:0:0:1:0:-:Ground:$15:506:0.007001119:490:0:0:0:1:0:-:Ground:$15:506:0.007001119:489:0:0:0:1:0:-:Ground:$15:506:0.007001119:488:0:0:0:1:0:-:Ground:$15:506:0.007001119:487:0:0:0:1:0:-:Ground:$15:506:0.007001119:486:0:0:0:1:0:-:Ground:$15:506:0.007001119:485:0:0:0:1:0:-:Ground:$15:506:0.007001119:484:0:0:0:1:0:-:Ground:$15:506:0.007001119:483:0:0:0:1:0:-:Ground:$15:506:0.007001119:482:0:0:0:1:0:-:Ground:$15:507:0.007001119:499:0:0:0:1:0:-:Ground:$15:507:0.007001119:498:0:0:0:1:0:-:Ground:$15:507:0.007001119:497:0:0:0:1:0:-:Ground:$15:507:0.007001119:496:0:0:0:1:0:-:Ground:$15:507:0.007001119:495:0:0:0:1:0:-:Ground:$15:507:0.007001119:494:0:0:0:1:0:-:Ground:$15:507:0.007001119:493:0:0:0:1:0:-:Ground:$15:507:0.007001119:492:0:0:0:1:0:-:Ground:$15:507:0.007001119:491:0:0:0:1:0:-:Ground:$15:507:0.007001119:490:0:0:0:1:0:-:Ground:$15:507:0.007001119:489:0:0:0:1:0:-:Ground:$15:507:0.007001119:488:0:0:0:1:0:-:Ground:$15:507:0.007001119:487:0:0:0:1:0:-:Ground:$15:507:0.007001119:486:0:0:0:1:0:-:Ground:$15:507:0.007001119:485:0:0:0:1:0:-:Ground:$15:507:0.007001119:484:0:0:0:1:0:-:Ground:$15:507:0.007001119:483:0:0:0:1:0:-:Ground:$15:507:0.007001119:482:0:0:0:1:0:-:Ground:$15:508:0.007001119:499:0:0:0:1:0:-:Ground:$15:508:0.007001119:498:0:0:0:1:0:-:Ground:$15:508:0.007001119:497:0:0:0:1:0:-:Ground:$15:508:0.007001119:496:0:0:0:1:0:-:Ground:$15:508:0.007001119:495:0:0:0:1:0:-:Ground:$15:508:0.007001119:494:0:0:0:1:0:-:Ground:$15:508:0.007001119:493:0:0:0:1:0:-:Ground:$15:508:0.007001119:492:0:0:0:1:0:-:Ground:$15:508:0.007001119:491:0:0:0:1:0:-:Ground:$15:508:0.007001119:490:0:0:0:1:0:-:Ground:$15:508:0.007001119:489:0:0:0:1:0:-:Ground:$15:508:0.007001119:488:0:0:0:1:0:-:Ground:$15:508:0.007001119:487:0:0:0:1:0:-:Ground:$15:508:0.007001119:486:0:0:0:1:0:-:Ground:$15:508:0.007001119:485:0:0:0:1:0:-:Ground:$15:508:0.007001119:484:0:0:0:1:0:-:Ground:$15:508:0.007001119:483:0:0:0:1:0:-:Ground:$15:508:0.007001119:482:0:0:0:1:0:-:Ground:$15:509:0.007001119:499:0:0:0:1:0:-:Ground:$15:509:0.007001119:498:0:0:0:1:0:-:Ground:$15:509:0.007001119:497:0:0:0:1:0:-:Ground:$15:509:0.007001119:496:0:0:0:1:0:-:Ground:$15:509:0.007001119:495:0:0:0:1:0:-:Ground:$15:509:0.007001119:494:0:0:0:1:0:-:Ground:$15:509:0.007001119:493:0:0:0:1:0:-:Ground:$15:509:0.007001119:492:0:0:0:1:0:-:Ground:$15:509:0.007001119:491:0:0:0:1:0:-:Ground:$15:509:0.007001119:490:0:0:0:1:0:-:Ground:$15:509:0.007001119:489:0:0:0:1:0:-:Ground:$15:509:0.007001119:488:0:0:0:1:0:-:Ground:$15:509:0.007001119:487:0:0:0:1:0:-:Ground:$15:509:0.007001119:486:0:0:0:1:0:-:Ground:$15:509:0.007001119:485:0:0:0:1:0:-:Ground:$15:509:0.007001119:484:0:0:0:1:0:-:Ground:$15:509:0.007001119:483:0:0:0:1:0:-:Ground:$15:509:0.007001119:482:0:0:0:1:0:-:Ground:$15:510:0.007001119:499:0:0:0:1:0:-:Ground:$15:510:0.007001119:498:0:0:0:1:0:-:Ground:$15:510:0.007001119:497:0:0:0:1:0:-:Ground:$15:510:0.007001119:496:0:0:0:1:0:-:Ground:$15:510:0.007001119:495:0:0:0:1:0:-:Ground:$15:510:0.007001119:494:0:0:0:1:0:-:Ground:$15:510:0.007001119:493:0:0:0:1:0:-:Ground:$15:510:0.007001119:492:0:0:0:1:0:-:Ground:$15:510:0.007001119:491:0:0:0:1:0:-:Ground:$15:510:0.007001119:490:0:0:0:1:0:-:Ground:$15:510:0.007001119:489:0:0:0:1:0:-:Ground:$15:510:0.007001119:488:0:0:0:1:0:-:Ground:$15:510:0.007001119:487:0:0:0:1:0:-:Ground:$15:510:0.007001119:486:0:0:0:1:0:-:Ground:$15:510:0.007001119:485:0:0:0:1:0:-:Ground:$15:510:0.007001119:484:0:0:0:1:0:-:Ground:$15:510:0.007001119:483:0:0:0:1:0:-:Ground:$15:510:0.007001119:482:0:0:0:1:0:-:Ground:$15:511:0.007001119:499:0:0:0:1:0:-:Ground:$15:511:0.007001119:498:0:0:0:1:0:-:Ground:$15:511:0.007001119:497:0:0:0:1:0:-:Ground:$15:511:0.007001119:496:0:0:0:1:0:-:Ground:$15:511:0.007001119:495:0:0:0:1:0:-:Ground:$15:511:0.007001119:494:0:0:0:1:0:-:Ground:$15:511:0.007001119:493:0:0:0:1:0:-:Ground:$15:511:0.007001119:492:0:0:0:1:0:-:Ground:$15:511:0.007001119:491:0:0:0:1:0:-:Ground:$15:511:0.007001119:490:0:0:0:1:0:-:Ground:$15:511:0.007001119:489:0:0:0:1:0:-:Ground:$15:511:0.007001119:488:0:0:0:1:0:-:Ground:$15:511:0.007001119:487:0:0:0:1:0:-:Ground:$15:511:0.007001119:486:0:0:0:1:0:-:Ground:$15:511:0.007001119:485:0:0:0:1:0:-:Ground:$15:511:0.007001119:484:0:0:0:1:0:-:Ground:$15:511:0.007001119:483:0:0:0:1:0:-:Ground:$15:511:0.007001119:482:0:0:0:1:0:-:Ground:$15:512:0.007001119:499:0:0:0:1:0:-:Ground:$15:512:0.007001119:498:0:0:0:1:0:-:Ground:$15:512:0.007001119:497:0:0:0:1:0:-:Ground:$15:512:0.007001119:496:0:0:0:1:0:-:Ground:$15:512:0.007001119:495:0:0:0:1:0:-:Ground:$15:512:0.007001119:494:0:0:0:1:0:-:Ground:$15:512:0.007001119:493:0:0:0:1:0:-:Ground:$15:512:0.007001119:492:0:0:0:1:0:-:Ground:$15:512:0.007001119:491:0:0:0:1:0:-:Ground:$15:512:0.007001119:490:0:0:0:1:0:-:Ground:$15:512:0.007001119:489:0:0:0:1:0:-:Ground:$15:512:0.007001119:488:0:0:0:1:0:-:Ground:$15:512:0.007001119:487:0:0:0:1:0:-:Ground:$15:512:0.007001119:486:0:0:0:1:0:-:Ground:$15:512:0.007001119:485:0:0:0:1:0:-:Ground:$15:512:0.007001119:484:0:0:0:1:0:-:Ground:$15:512:0.007001119:483:0:0:0:1:0:-:Ground:$15:512:0.007001119:482:0:0:0:1:0:-:Ground:$15:513:0.007001119:499:0:0:0:1:0:-:Ground:$15:513:0.007001119:498:0:0:0:1:0:-:Ground:$15:513:0.007001119:497:0:0:0:1:0:-:Ground:$15:513:0.007001119:496:0:0:0:1:0:-:Ground:$15:513:0.007001119:495:0:0:0:1:0:-:Ground:$15:513:0.007001119:494:0:0:0:1:0:-:Ground:$15:513:0.007001119:493:0:0:0:1:0:-:Ground:$15:513:0.007001119:492:0:0:0:1:0:-:Ground:$15:513:0.007001119:491:0:0:0:1:0:-:Ground:$15:513:0.007001119:490:0:0:0:1:0:-:Ground:$15:513:0.007001119:489:0:0:0:1:0:-:Ground:$15:513:0.007001119:488:0:0:0:1:0:-:Ground:$15:513:0.007001119:487:0:0:0:1:0:-:Ground:$15:513:0.007001119:486:0:0:0:1:0:-:Ground:$15:513:0.007001119:485:0:0:0:1:0:-:Ground:$15:513:0.007001119:484:0:0:0:1:0:-:Ground:$15:513:0.007001119:483:0:0:0:1:0:-:Ground:$15:513:0.007001119:482:0:0:0:1:0:-:Ground:$15:514:0.007001119:499:0:0:0:1:0:-:Ground:$15:514:0.007001119:498:0:0:0:1:0:-:Ground:$15:514:0.007001119:497:0:0:0:1:0:-:Ground:$15:514:0.007001119:496:0:0:0:1:0:-:Ground:$15:514:0.007001119:495:0:0:0:1:0:-:Ground:$15:514:0.007001119:494:0:0:0:1:0:-:Ground:$15:514:0.007001119:493:0:0:0:1:0:-:Ground:$15:514:0.007001119:492:0:0:0:1:0:-:Ground:$15:514:0.007001119:491:0:0:0:1:0:-:Ground:$15:514:0.007001119:490:0:0:0:1:0:-:Ground:$15:514:0.007001119:489:0:0:0:1:0:-:Ground:$15:514:0.007001119:488:0:0:0:1:0:-:Ground:$15:514:0.007001119:487:0:0:0:1:0:-:Ground:$15:514:0.007001119:486:0:0:0:1:0:-:Ground:$15:514:0.007001119:485:0:0:0:1:0:-:Ground:$15:514:0.007001119:484:0:0:0:1:0:-:Ground:$15:514:0.007001119:483:0:0:0:1:0:-:Ground:$15:514:0.007001119:482:0:0:0:1:0:-:Ground:$15:515:0.007001119:499:0:0:0:1:0:-:Ground:$15:515:0.007001119:498:0:0:0:1:0:-:Ground:$15:515:0.007001119:497:0:0:0:1:0:-:Ground:$15:515:0.007001119:496:0:0:0:1:0:-:Ground:$15:515:0.007001119:495:0:0:0:1:0:-:Ground:$15:515:0.007001119:494:0:0:0:1:0:-:Ground:$15:515:0.007001119:493:0:0:0:1:0:-:Ground:$15:515:0.007001119:492:0:0:0:1:0:-:Ground:$15:515:0.007001119:491:0:0:0:1:0:-:Ground:$15:515:0.007001119:490:0:0:0:1:0:-:Ground:$15:515:0.007001119:489:0:0:0:1:0:-:Ground:$15:515:0.007001119:488:0:0:0:1:0:-:Ground:$15:515:0.007001119:487:0:0:0:1:0:-:Ground:$15:515:0.007001119:486:0:0:0:1:0:-:Ground:$15:515:0.007001119:485:0:0:0:1:0:-:Ground:$15:515:0.007001119:484:0:0:0:1:0:-:Ground:$15:515:0.007001119:483:0:0:0:1:0:-:Ground:$15:515:0.007001119:482:0:0:0:1:0:-:Ground:$15:516:0.007001119:499:0:0:0:1:0:-:Ground:$15:516:0.007001119:498:0:0:0:1:0:-:Ground:$15:516:0.007001119:497:0:0:0:1:0:-:Ground:$15:516:0.007001119:496:0:0:0:1:0:-:Ground:$15:516:0.007001119:495:0:0:0:1:0:-:Ground:$15:516:0.007001119:494:0:0:0:1:0:-:Ground:$15:516:0.007001119:493:0:0:0:1:0:-:Ground:$15:516:0.007001119:492:0:0:0:1:0:-:Ground:$15:516:0.007001119:491:0:0:0:1:0:-:Ground:$15:516:0.007001119:490:0:0:0:1:0:-:Ground:$15:516:0.007001119:489:0:0:0:1:0:-:Ground:$15:516:0.007001119:488:0:0:0:1:0:-:Ground:$15:516:0.007001119:487:0:0:0:1:0:-:Ground:$15:516:0.007001119:486:0:0:0:1:0:-:Ground:$15:516:0.007001119:485:0:0:0:1:0:-:Ground:$15:516:0.007001119:484:0:0:0:1:0:-:Ground:$15:516:0.007001119:483:0:0:0:1:0:-:Ground:$15:516:0.007001119:482:0:0:0:1:0:-:Ground:$15:517:0.007001119:499:0:0:0:1:0:-:Ground:$15:517:0.007001119:498:0:0:0:1:0:-:Ground:$15:517:0.007001119:497:0:0:0:1:0:-:Ground:$15:517:0.007001119:496:0:0:0:1:0:-:Ground:$15:517:0.007001119:495:0:0:0:1:0:-:Ground:$15:517:0.007001119:494:0:0:0:1:0:-:Ground:$15:517:0.007001119:493:0:0:0:1:0:-:Ground:$15:517:0.007001119:492:0:0:0:1:0:-:Ground:$15:517:0.007001119:491:0:0:0:1:0:-:Ground:$15:517:0.007001119:490:0:0:0:1:0:-:Ground:$15:517:0.007001119:489:0:0:0:1:0:-:Ground:$15:517:0.007001119:488:0:0:0:1:0:-:Ground:$15:517:0.007001119:487:0:0:0:1:0:-:Ground:$15:517:0.007001119:486:0:0:0:1:0:-:Ground:$15:517:0.007001119:485:0:0:0:1:0:-:Ground:$15:517:0.007001119:484:0:0:0:1:0:-:Ground:$15:517:0.007001119:483:0:0:0:1:0:-:Ground:$15:517:0.007001119:482:0:0:0:1:0:-:Ground:$15:518:0.007001119:499:0:0:0:1:0:-:Ground:$15:518:0.007001119:498:0:0:0:1:0:-:Ground:$15:518:0.007001119:497:0:0:0:1:0:-:Ground:$15:518:0.007001119:496:0:0:0:1:0:-:Ground:$15:518:0.007001119:495:0:0:0:1:0:-:Ground:$15:518:0.007001119:494:0:0:0:1:0:-:Ground:$15:518:0.007001119:493:0:0:0:1:0:-:Ground:$15:518:0.007001119:492:0:0:0:1:0:-:Ground:$15:518:0.007001119:491:0:0:0:1:0:-:Ground:$15:518:0.007001119:490:0:0:0:1:0:-:Ground:$15:518:0.007001119:489:0:0:0:1:0:-:Ground:$15:518:0.007001119:488:0:0:0:1:0:-:Ground:$15:518:0.007001119:487:0:0:0:1:0:-:Ground:$15:518:0.007001119:486:0:0:0:1:0:-:Ground:$15:518:0.007001119:485:0:0:0:1:0:-:Ground:$15:518:0.007001119:484:0:0:0:1:0:-:Ground:$15:518:0.007001119:483:0:0:0:1:0:-:Ground:$15:518:0.007001119:482:0:0:0:1:0:-:Ground:$15:519:0.007001119:499:0:0:0:1:0:-:Ground:$15:519:0.007001119:498:0:0:0:1:0:-:Ground:$15:519:0.007001119:497:0:0:0:1:0:-:Ground:$15:519:0.007001119:496:0:0:0:1:0:-:Ground:$15:519:0.007001119:495:0:0:0:1:0:-:Ground:$15:519:0.007001119:494:0:0:0:1:0:-:Ground:$15:519:0.007001119:493:0:0:0:1:0:-:Ground:$15:519:0.007001119:492:0:0:0:1:0:-:Ground:$15:519:0.007001119:491:0:0:0:1:0:-:Ground:$15:519:0.007001119:490:0:0:0:1:0:-:Ground:$15:519:0.007001119:489:0:0:0:1:0:-:Ground:$15:519:0.007001119:488:0:0:0:1:0:-:Ground:$15:519:0.007001119:487:0:0:0:1:0:-:Ground:$15:519:0.007001119:486:0:0:0:1:0:-:Ground:$15:519:0.007001119:485:0:0:0:1:0:-:Ground:$15:519:0.007001119:484:0:0:0:1:0:-:Ground:$15:519:0.007001119:483:0:0:0:1:0:-:Ground:$15:519:0.007001119:482:0:0:0:1:0:-:Ground:$15:497:0.007001119:494:0:0:0:1:0:-:Ground:$15:497:0.007001119:493:0:0:0:1:0:-:Ground:$15:497:0.007001119:492:0:0:0:1:0:-:Ground:$15:497:0.007001119:491:0:0:0:1:0:-:Ground:$15:497:0.007001119:490:0:0:0:1:0:-:Ground:$15:497:0.007001119:489:0:0:0:1:0:-:Ground:$15:497:0.007001119:488:0:0:0:1:0:-:Ground:$15:497:0.007001119:487:0:0:0:1:0:-:Ground:$15:497:0.007001119:486:0:0:0:1:0:-:Ground:$15:497:0.007001119:485:0:0:0:1:0:-:Ground:$15:497:0.007001119:484:0:0:0:1:0:-:Ground:$15:497:0.007001119:483:0:0:0:1:0:-:Ground:$15:497:0.007001119:482:0:0:0:1:0:-:Ground:$15:496:0.007001119:494:0:0:0:1:0:-:Ground:$15:496:0.007001119:493:0:0:0:1:0:-:Ground:$15:496:0.007001119:492:0:0:0:1:0:-:Ground:$15:496:0.007001119:491:0:0:0:1:0:-:Ground:$15:496:0.007001119:490:0:0:0:1:0:-:Ground:$15:496:0.007001119:489:0:0:0:1:0:-:Ground:$15:496:0.007001119:488:0:0:0:1:0:-:Ground:$15:496:0.007001119:487:0:0:0:1:0:-:Ground:$15:496:0.007001119:486:0:0:0:1:0:-:Ground:$15:496:0.007001119:485:0:0:0:1:0:-:Ground:$15:496:0.007001119:484:0:0:0:1:0:-:Ground:$15:496:0.007001119:483:0:0:0:1:0:-:Ground:$15:496:0.007001119:482:0:0:0:1:0:-:Ground:$15:495:0.007001119:494:0:0:0:1:0:-:Ground:$15:495:0.007001119:493:0:0:0:1:0:-:Ground:$15:495:0.007001119:492:0:0:0:1:0:-:Ground:$15:495:0.007001119:491:0:0:0:1:0:-:Ground:$15:495:0.007001119:490:0:0:0:1:0:-:Ground:$15:495:0.007001119:489:0:0:0:1:0:-:Ground:$15:495:0.007001119:488:0:0:0:1:0:-:Ground:$15:495:0.007001119:487:0:0:0:1:0:-:Ground:$15:495:0.007001119:486:0:0:0:1:0:-:Ground:$15:495:0.007001119:485:0:0:0:1:0:-:Ground:$15:495:0.007001119:484:0:0:0:1:0:-:Ground:$15:495:0.007001119:483:0:0:0:1:0:-:Ground:$15:495:0.007001119:482:0:0:0:1:0:-:Ground:$15:494:0.007001119:494:0:0:0:1:0:-:Ground:$15:494:0.007001119:493:0:0:0:1:0:-:Ground:$15:494:0.007001119:492:0:0:0:1:0:-:Ground:$15:494:0.007001119:491:0:0:0:1:0:-:Ground:$15:494:0.007001119:490:0:0:0:1:0:-:Ground:$15:494:0.007001119:489:0:0:0:1:0:-:Ground:$15:494:0.007001119:488:0:0:0:1:0:-:Ground:$15:494:0.007001119:487:0:0:0:1:0:-:Ground:$15:494:0.007001119:486:0:0:0:1:0:-:Ground:$15:494:0.007001119:485:0:0:0:1:0:-:Ground:$15:494:0.007001119:484:0:0:0:1:0:-:Ground:$15:494:0.007001119:483:0:0:0:1:0:-:Ground:$15:494:0.007001119:482:0:0:0:1:0:-:Ground:$15:493:0.007001119:494:0:0:0:1:0:-:Ground:$15:493:0.007001119:493:0:0:0:1:0:-:Ground:$15:493:0.007001119:492:0:0:0:1:0:-:Ground:$15:493:0.007001119:491:0:0:0:1:0:-:Ground:$15:493:0.007001119:490:0:0:0:1:0:-:Ground:$15:493:0.007001119:489:0:0:0:1:0:-:Ground:$15:493:0.007001119:488:0:0:0:1:0:-:Ground:$15:493:0.007001119:487:0:0:0:1:0:-:Ground:$15:493:0.007001119:486:0:0:0:1:0:-:Ground:$15:493:0.007001119:485:0:0:0:1:0:-:Ground:$15:493:0.007001119:484:0:0:0:1:0:-:Ground:$15:493:0.007001119:483:0:0:0:1:0:-:Ground:$15:493:0.007001119:482:0:0:0:1:0:-:Ground:$15:492:0.007001119:494:0:0:0:1:0:-:Ground:$15:492:0.007001119:493:0:0:0:1:0:-:Ground:$15:492:0.007001119:492:0:0:0:1:0:-:Ground:$15:492:0.007001119:491:0:0:0:1:0:-:Ground:$15:492:0.007001119:490:0:0:0:1:0:-:Ground:$15:492:0.007001119:489:0:0:0:1:0:-:Ground:$15:492:0.007001119:488:0:0:0:1:0:-:Ground:$15:492:0.007001119:487:0:0:0:1:0:-:Ground:$15:492:0.007001119:486:0:0:0:1:0:-:Ground:$15:492:0.007001119:485:0:0:0:1:0:-:Ground:$15:492:0.007001119:484:0:0:0:1:0:-:Ground:$15:492:0.007001119:483:0:0:0:1:0:-:Ground:$15:492:0.007001119:482:0:0:0:1:0:-:Ground:$15:491:0.007001119:494:0:0:0:1:0:-:Ground:$15:491:0.007001119:493:0:0:0:1:0:-:Ground:$15:491:0.007001119:492:0:0:0:1:0:-:Ground:$15:491:0.007001119:491:0:0:0:1:0:-:Ground:$15:491:0.007001119:490:0:0:0:1:0:-:Ground:$15:491:0.007001119:489:0:0:0:1:0:-:Ground:$15:491:0.007001119:488:0:0:0:1:0:-:Ground:$15:491:0.007001119:487:0:0:0:1:0:-:Ground:$15:491:0.007001119:486:0:0:0:1:0:-:Ground:$15:491:0.007001119:485:0:0:0:1:0:-:Ground:$15:491:0.007001119:484:0:0:0:1:0:-:Ground:$15:491:0.007001119:483:0:0:0:1:0:-:Ground:$15:491:0.007001119:482:0:0:0:1:0:-:Ground:$15:490:0.007001119:494:0:0:0:1:0:-:Ground:$15:490:0.007001119:493:0:0:0:1:0:-:Ground:$15:490:0.007001119:492:0:0:0:1:0:-:Ground:$15:490:0.007001119:491:0:0:0:1:0:-:Ground:$15:490:0.007001119:490:0:0:0:1:0:-:Ground:$15:490:0.007001119:489:0:0:0:1:0:-:Ground:$15:490:0.007001119:488:0:0:0:1:0:-:Ground:$15:490:0.007001119:487:0:0:0:1:0:-:Ground:$15:490:0.007001119:486:0:0:0:1:0:-:Ground:$15:490:0.007001119:485:0:0:0:1:0:-:Ground:$15:490:0.007001119:484:0:0:0:1:0:-:Ground:$15:490:0.007001119:483:0:0:0:1:0:-:Ground:$15:490:0.007001119:482:0:0:0:1:0:-:Ground:$15:489:0.007001119:494:0:0:0:1:0:-:Ground:$15:489:0.007001119:493:0:0:0:1:0:-:Ground:$15:489:0.007001119:492:0:0:0:1:0:-:Ground:$15:489:0.007001119:491:0:0:0:1:0:-:Ground:$15:489:0.007001119:490:0:0:0:1:0:-:Ground:$15:489:0.007001119:489:0:0:0:1:0:-:Ground:$15:489:0.007001119:488:0:0:0:1:0:-:Ground:$15:489:0.007001119:487:0:0:0:1:0:-:Ground:$15:489:0.007001119:486:0:0:0:1:0:-:Ground:$15:489:0.007001119:485:0:0:0:1:0:-:Ground:$15:489:0.007001119:484:0:0:0:1:0:-:Ground:$15:489:0.007001119:483:0:0:0:1:0:-:Ground:$15:489:0.007001119:482:0:0:0:1:0:-:Ground:$15:488:0.007001119:494:0:0:0:1:0:-:Ground:$15:488:0.007001119:493:0:0:0:1:0:-:Ground:$15:488:0.007001119:492:0:0:0:1:0:-:Ground:$15:488:0.007001119:491:0:0:0:1:0:-:Ground:$15:488:0.007001119:490:0:0:0:1:0:-:Ground:$15:488:0.007001119:489:0:0:0:1:0:-:Ground:$15:488:0.007001119:488:0:0:0:1:0:-:Ground:$15:488:0.007001119:487:0:0:0:1:0:-:Ground:$15:488:0.007001119:486:0:0:0:1:0:-:Ground:$15:488:0.007001119:485:0:0:0:1:0:-:Ground:$15:488:0.007001119:484:0:0:0:1:0:-:Ground:$15:488:0.007001119:483:0:0:0:1:0:-:Ground:$15:488:0.007001119:482:0:0:0:1:0:-:Ground:$15:487:0.007001119:494:0:0:0:1:0:-:Ground:$15:487:0.007001119:493:0:0:0:1:0:-:Ground:$15:487:0.007001119:492:0:0:0:1:0:-:Ground:$15:487:0.007001119:491:0:0:0:1:0:-:Ground:$15:487:0.007001119:490:0:0:0:1:0:-:Ground:$15:487:0.007001119:489:0:0:0:1:0:-:Ground:$15:487:0.007001119:488:0:0:0:1:0:-:Ground:$15:487:0.007001119:487:0:0:0:1:0:-:Ground:$15:487:0.007001119:486:0:0:0:1:0:-:Ground:$15:487:0.007001119:485:0:0:0:1:0:-:Ground:$15:487:0.007001119:484:0:0:0:1:0:-:Ground:$15:487:0.007001119:483:0:0:0:1:0:-:Ground:$15:487:0.007001119:482:0:0:0:1:0:-:Ground:$15:486:0.007001119:494:0:0:0:1:0:-:Ground:$15:486:0.007001119:493:0:0:0:1:0:-:Ground:$15:486:0.007001119:492:0:0:0:1:0:-:Ground:$15:486:0.007001119:491:0:0:0:1:0:-:Ground:$15:486:0.007001119:490:0:0:0:1:0:-:Ground:$15:486:0.007001119:489:0:0:0:1:0:-:Ground:$15:486:0.007001119:488:0:0:0:1:0:-:Ground:$15:486:0.007001119:487:0:0:0:1:0:-:Ground:$15:486:0.007001119:486:0:0:0:1:0:-:Ground:$15:486:0.007001119:485:0:0:0:1:0:-:Ground:$15:486:0.007001119:484:0:0:0:1:0:-:Ground:$15:486:0.007001119:483:0:0:0:1:0:-:Ground:$15:486:0.007001119:482:0:0:0:1:0:-:Ground:$15:489:0.007001119:495:0:0:0:1:0:-:Ground:$15:489:0.007001119:496:0:0:0:1:0:-:Ground:$15:489:0.007001119:497:0:0:0:1:0:-:Ground:$15:489:0.007001119:498:0:0:0:1:0:-:Ground:$15:489:0.007001119:499:0:0:0:1:0:-:Ground:$15:489:0.007001119:500:0:0:0:1:0:-:Ground:$15:489:0.007001119:501:0:0:0:1:0:-:Ground:$15:489:0.007001119:502:0:0:0:1:0:-:Ground:$15:489:0.007001119:503:0:0:0:1:0:-:Ground:$15:489:0.007001119:504:0:0:0:1:0:-:Ground:$15:489:0.007001119:505:0:0:0:1:0:-:Ground:$15:489:0.007001119:506:0:0:0:1:0:-:Ground:$15:489:0.007001119:507:0:0:0:1:0:-:Ground:$15:489:0.007001119:508:0:0:0:1:0:-:Ground:$15:489:0.007001119:509:0:0:0:1:0:-:Ground:$15:489:0.007001119:510:0:0:0:1:0:-:Ground:$15:489:0.007001119:511:0:0:0:1:0:-:Ground:$15:488:0.007001119:495:0:0:0:1:0:-:Ground:$15:488:0.007001119:496:0:0:0:1:0:-:Ground:$15:488:0.007001119:497:0:0:0:1:0:-:Ground:$15:488:0.007001119:498:0:0:0:1:0:-:Ground:$15:488:0.007001119:499:0:0:0:1:0:-:Ground:$15:488:0.007001119:500:0:0:0:1:0:-:Ground:$15:488:0.007001119:501:0:0:0:1:0:-:Ground:$15:488:0.007001119:502:0:0:0:1:0:-:Ground:$15:488:0.007001119:503:0:0:0:1:0:-:Ground:$15:488:0.007001119:504:0:0:0:1:0:-:Ground:$15:488:0.007001119:505:0:0:0:1:0:-:Ground:$15:488:0.007001119:506:0:0:0:1:0:-:Ground:$15:488:0.007001119:507:0:0:0:1:0:-:Ground:$15:488:0.007001119:508:0:0:0:1:0:-:Ground:$15:488:0.007001119:509:0:0:0:1:0:-:Ground:$15:488:0.007001119:510:0:0:0:1:0:-:Ground:$15:488:0.007001119:511:0:0:0:1:0:-:Ground:$15:487:0.007001119:495:0:0:0:1:0:-:Ground:$15:487:0.007001119:496:0:0:0:1:0:-:Ground:$15:487:0.007001119:497:0:0:0:1:0:-:Ground:$15:487:0.007001119:498:0:0:0:1:0:-:Ground:$15:487:0.007001119:499:0:0:0:1:0:-:Ground:$15:487:0.007001119:500:0:0:0:1:0:-:Ground:$15:487:0.007001119:501:0:0:0:1:0:-:Ground:$15:487:0.007001119:502:0:0:0:1:0:-:Ground:$15:487:0.007001119:503:0:0:0:1:0:-:Ground:$15:487:0.007001119:504:0:0:0:1:0:-:Ground:$15:487:0.007001119:505:0:0:0:1:0:-:Ground:$15:487:0.007001119:506:0:0:0:1:0:-:Ground:$15:487:0.007001119:507:0:0:0:1:0:-:Ground:$15:487:0.007001119:508:0:0:0:1:0:-:Ground:$15:487:0.007001119:509:0:0:0:1:0:-:Ground:$15:487:0.007001119:510:0:0:0:1:0:-:Ground:$15:487:0.007001119:511:0:0:0:1:0:-:Ground:$15:486:0.007001119:495:0:0:0:1:0:-:Ground:$15:486:0.007001119:496:0:0:0:1:0:-:Ground:$15:486:0.007001119:497:0:0:0:1:0:-:Ground:$15:486:0.007001119:498:0:0:0:1:0:-:Ground:$15:486:0.007001119:499:0:0:0:1:0:-:Ground:$15:486:0.007001119:500:0:0:0:1:0:-:Ground:$15:486:0.007001119:501:0:0:0:1:0:-:Ground:$15:486:0.007001119:502:0:0:0:1:0:-:Ground:$15:486:0.007001119:503:0:0:0:1:0:-:Ground:$15:486:0.007001119:504:0:0:0:1:0:-:Ground:$15:486:0.007001119:505:0:0:0:1:0:-:Ground:$15:486:0.007001119:506:0:0:0:1:0:-:Ground:$15:486:0.007001119:507:0:0:0:1:0:-:Ground:$15:486:0.007001119:508:0:0:0:1:0:-:Ground:$15:486:0.007001119:509:0:0:0:1:0:-:Ground:$15:486:0.007001119:510:0:0:0:1:0:-:Ground:$15:486:0.007001119:511:0:0:0:1:0:-:Ground:$15:485:0.007001119:495:0:0:0:1:0:-:Ground:$15:485:0.007001119:496:0:0:0:1:0:-:Ground:$15:485:0.007001119:497:0:0:0:1:0:-:Ground:$15:485:0.007001119:498:0:0:0:1:0:-:Ground:$15:485:0.007001119:499:0:0:0:1:0:-:Ground:$15:485:0.007001119:500:0:0:0:1:0:-:Ground:$15:485:0.007001119:501:0:0:0:1:0:-:Ground:$15:485:0.007001119:502:0:0:0:1:0:-:Ground:$15:485:0.007001119:503:0:0:0:1:0:-:Ground:$15:485:0.007001119:504:0:0:0:1:0:-:Ground:$15:485:0.007001119:505:0:0:0:1:0:-:Ground:$15:485:0.007001119:506:0:0:0:1:0:-:Ground:$15:485:0.007001119:507:0:0:0:1:0:-:Ground:$15:485:0.007001119:508:0:0:0:1:0:-:Ground:$15:485:0.007001119:509:0:0:0:1:0:-:Ground:$15:485:0.007001119:510:0:0:0:1:0:-:Ground:$15:485:0.007001119:511:0:0:0:1:0:-:Ground:$15:484:0.007001119:495:0:0:0:1:0:-:Ground:$15:484:0.007001119:496:0:0:0:1:0:-:Ground:$15:484:0.007001119:497:0:0:0:1:0:-:Ground:$15:484:0.007001119:498:0:0:0:1:0:-:Ground:$15:484:0.007001119:499:0:0:0:1:0:-:Ground:$15:484:0.007001119:500:0:0:0:1:0:-:Ground:$15:484:0.007001119:501:0:0:0:1:0:-:Ground:$15:484:0.007001119:502:0:0:0:1:0:-:Ground:$15:484:0.007001119:503:0:0:0:1:0:-:Ground:$15:484:0.007001119:504:0:0:0:1:0:-:Ground:$15:484:0.007001119:505:0:0:0:1:0:-:Ground:$15:484:0.007001119:506:0:0:0:1:0:-:Ground:$15:484:0.007001119:507:0:0:0:1:0:-:Ground:$15:484:0.007001119:508:0:0:0:1:0:-:Ground:$15:484:0.007001119:509:0:0:0:1:0:-:Ground:$15:484:0.007001119:510:0:0:0:1:0:-:Ground:$15:484:0.007001119:511:0:0:0:1:0:-:Ground:$15:483:0.007001119:495:0:0:0:1:0:-:Ground:$15:483:0.007001119:496:0:0:0:1:0:-:Ground:$15:483:0.007001119:497:0:0:0:1:0:-:Ground:$15:483:0.007001119:498:0:0:0:1:0:-:Ground:$15:483:0.007001119:499:0:0:0:1:0:-:Ground:$15:483:0.007001119:500:0:0:0:1:0:-:Ground:$15:483:0.007001119:501:0:0:0:1:0:-:Ground:$15:483:0.007001119:502:0:0:0:1:0:-:Ground:$15:483:0.007001119:503:0:0:0:1:0:-:Ground:$15:483:0.007001119:504:0:0:0:1:0:-:Ground:$15:483:0.007001119:505:0:0:0:1:0:-:Ground:$15:483:0.007001119:506:0:0:0:1:0:-:Ground:$15:483:0.007001119:507:0:0:0:1:0:-:Ground:$15:483:0.007001119:508:0:0:0:1:0:-:Ground:$15:483:0.007001119:509:0:0:0:1:0:-:Ground:$15:483:0.007001119:510:0:0:0:1:0:-:Ground:$15:483:0.007001119:511:0:0:0:1:0:-:Ground:$15:482:0.007001119:495:0:0:0:1:0:-:Ground:$15:482:0.007001119:496:0:0:0:1:0:-:Ground:$15:482:0.007001119:497:0:0:0:1:0:-:Ground:$15:482:0.007001119:498:0:0:0:1:0:-:Ground:$15:482:0.007001119:499:0:0:0:1:0:-:Ground:$15:482:0.007001119:500:0:0:0:1:0:-:Ground:$15:482:0.007001119:501:0:0:0:1:0:-:Ground:$15:482:0.007001119:502:0:0:0:1:0:-:Ground:$15:482:0.007001119:503:0:0:0:1:0:-:Ground:$15:482:0.007001119:504:0:0:0:1:0:-:Ground:$15:482:0.007001119:505:0:0:0:1:0:-:Ground:$15:482:0.007001119:506:0:0:0:1:0:-:Ground:$15:482:0.007001119:507:0:0:0:1:0:-:Ground:$15:482:0.007001119:508:0:0:0:1:0:-:Ground:$15:482:0.007001119:509:0:0:0:1:0:-:Ground:$15:482:0.007001119:510:0:0:0:1:0:-:Ground:$15:482:0.007001119:511:0:0:0:1:0:-:Ground:$15:490:0.007001119:511:0:0:0:1:0:-:Ground:$15:490:0.007001119:510:0:0:0:1:0:-:Ground:$15:490:0.007001119:509:0:0:0:1:0:-:Ground:$15:490:0.007001119:508:0:0:0:1:0:-:Ground:$15:491:0.007001119:511:0:0:0:1:0:-:Ground:$15:491:0.007001119:510:0:0:0:1:0:-:Ground:$15:491:0.007001119:509:0:0:0:1:0:-:Ground:$15:491:0.007001119:508:0:0:0:1:0:-:Ground:$15:492:0.007001119:511:0:0:0:1:0:-:Ground:$15:492:0.007001119:510:0:0:0:1:0:-:Ground:$15:492:0.007001119:509:0:0:0:1:0:-:Ground:$15:492:0.007001119:508:0:0:0:1:0:-:Ground:$15:493:0.007001119:511:0:0:0:1:0:-:Ground:$15:493:0.007001119:510:0:0:0:1:0:-:Ground:$15:493:0.007001119:509:0:0:0:1:0:-:Ground:$15:493:0.007001119:508:0:0:0:1:0:-:Ground:$15:494:0.007001119:511:0:0:0:1:0:-:Ground:$15:494:0.007001119:510:0:0:0:1:0:-:Ground:$15:494:0.007001119:509:0:0:0:1:0:-:Ground:$15:494:0.007001119:508:0:0:0:1:0:-:Ground:$15:495:0.007001119:511:0:0:0:1:0:-:Ground:$15:495:0.007001119:510:0:0:0:1:0:-:Ground:$15:495:0.007001119:509:0:0:0:1:0:-:Ground:$15:495:0.007001119:508:0:0:0:1:0:-:Ground:$15:496:0.007001119:511:0:0:0:1:0:-:Ground:$15:496:0.007001119:510:0:0:0:1:0:-:Ground:$15:496:0.007001119:509:0:0:0:1:0:-:Ground:$15:496:0.007001119:508:0:0:0:1:0:-:Ground:$15:497:0.007001119:511:0:0:0:1:0:-:Ground:$15:497:0.007001119:510:0:0:0:1:0:-:Ground:$15:497:0.007001119:509:0:0:0:1:0:-:Ground:$15:497:0.007001119:508:0:0:0:1:0:-:Ground:$15:498:0.007001119:511:0:0:0:1:0:-:Ground:$15:498:0.007001119:510:0:0:0:1:0:-:Ground:$15:498:0.007001119:509:0:0:0:1:0:-:Ground:$15:498:0.007001119:508:0:0:0:1:0:-:Ground:$15:499:0.007001119:511:0:0:0:1:0:-:Ground:$15:499:0.007001119:510:0:0:0:1:0:-:Ground:$15:499:0.007001119:509:0:0:0:1:0:-:Ground:$15:499:0.007001119:508:0:0:0:1:0:-:Ground:$15:500:0.007001119:511:0:0:0:1:0:-:Ground:$15:500:0.007001119:510:0:0:0:1:0:-:Ground:$15:500:0.007001119:509:0:0:0:1:0:-:Ground:$15:500:0.007001119:508:0:0:0:1:0:-:Ground:$15:501:0.007001119:511:0:0:0:1:0:-:Ground:$15:501:0.007001119:510:0:0:0:1:0:-:Ground:$15:501:0.007001119:509:0:0:0:1:0:-:Ground:$15:501:0.007001119:508:0:0:0:1:0:-:Ground:$15:502:0.007001119:511:0:0:0:1:0:-:Ground:$15:502:0.007001119:510:0:0:0:1:0:-:Ground:$15:502:0.007001119:509:0:0:0:1:0:-:Ground:$15:502:0.007001119:508:0:0:0:1:0:-:Ground:$15:503:0.007001119:511:0:0:0:1:0:-:Ground:$15:503:0.007001119:510:0:0:0:1:0:-:Ground:$15:503:0.007001119:509:0:0:0:1:0:-:Ground:$15:503:0.007001119:508:0:0:0:1:0:-:Ground:$15:504:0.007001119:511:0:0:0:1:0:-:Ground:$15:504:0.007001119:510:0:0:0:1:0:-:Ground:$15:504:0.007001119:509:0:0:0:1:0:-:Ground:$15:504:0.007001119:508:0:0:0:1:0:-:Ground:$15:505:0.007001119:511:0:0:0:1:0:-:Ground:$15:505:0.007001119:510:0:0:0:1:0:-:Ground:$15:505:0.007001119:509:0:0:0:1:0:-:Ground:$15:505:0.007001119:508:0:0:0:1:0:-:Ground:$15:506:0.007001119:511:0:0:0:1:0:-:Ground:$15:506:0.007001119:510:0:0:0:1:0:-:Ground:$15:506:0.007001119:509:0:0:0:1:0:-:Ground:$15:506:0.007001119:508:0:0:0:1:0:-:Ground:$15:507:0.007001119:511:0:0:0:1:0:-:Ground:$15:507:0.007001119:510:0:0:0:1:0:-:Ground:$15:507:0.007001119:509:0:0:0:1:0:-:Ground:$15:507:0.007001119:508:0:0:0:1:0:-:Ground:$15:508:0.007001119:511:0:0:0:1:0:-:Ground:$15:508:0.007001119:510:0:0:0:1:0:-:Ground:$15:508:0.007001119:509:0:0:0:1:0:-:Ground:$15:508:0.007001119:508:0:0:0:1:0:-:Ground:$15:509:0.007001119:511:0:0:0:1:0:-:Ground:$15:509:0.007001119:510:0:0:0:1:0:-:Ground:$15:509:0.007001119:509:0:0:0:1:0:-:Ground:$15:509:0.007001119:508:0:0:0:1:0:-:Ground:$15:510:0.007001119:511:0:0:0:1:0:-:Ground:$15:510:0.007001119:510:0:0:0:1:0:-:Ground:$15:510:0.007001119:509:0:0:0:1:0:-:Ground:$15:510:0.007001119:508:0:0:0:1:0:-:Ground:$15:511:0.007001119:511:0:0:0:1:0:-:Ground:$15:511:0.007001119:510:0:0:0:1:0:-:Ground:$15:511:0.007001119:509:0:0:0:1:0:-:Ground:$15:511:0.007001119:508:0:0:0:1:0:-:Ground:$15:512:0.007001119:511:0:0:0:1:0:-:Ground:$15:512:0.007001119:510:0:0:0:1:0:-:Ground:$15:512:0.007001119:509:0:0:0:1:0:-:Ground:$15:512:0.007001119:508:0:0:0:1:0:-:Ground:$15:513:0.007001119:511:0:0:0:1:0:-:Ground:$15:513:0.007001119:510:0:0:0:1:0:-:Ground:$15:513:0.007001119:509:0:0:0:1:0:-:Ground:$15:513:0.007001119:508:0:0:0:1:0:-:Ground:$15:514:0.007001119:511:0:0:0:1:0:-:Ground:$15:514:0.007001119:510:0:0:0:1:0:-:Ground:$15:514:0.007001119:509:0:0:0:1:0:-:Ground:$15:514:0.007001119:508:0:0:0:1:0:-:Ground:$15:515:0.007001119:511:0:0:0:1:0:-:Ground:$15:515:0.007001119:510:0:0:0:1:0:-:Ground:$15:515:0.007001119:509:0:0:0:1:0:-:Ground:$15:515:0.007001119:508:0:0:0:1:0:-:Ground:$15:510:0.007001119:507:0:0:0:1:0:-:Ground:$15:510:0.007001119:506:0:0:0:1:0:-:Ground:$15:510:0.007001119:505:0:0:0:1:0:-:Ground:$15:510:0.007001119:504:0:0:0:1:0:-:Ground:$15:510:0.007001119:503:0:0:0:1:0:-:Ground:$15:510:0.007001119:502:0:0:0:1:0:-:Ground:$15:510:0.007001119:501:0:0:0:1:0:-:Ground:$15:510:0.007001119:500:0:0:0:1:0:-:Ground:$15:511:0.007001119:507:0:0:0:1:0:-:Ground:$15:511:0.007001119:506:0:0:0:1:0:-:Ground:$15:511:0.007001119:505:0:0:0:1:0:-:Ground:$15:511:0.007001119:504:0:0:0:1:0:-:Ground:$15:511:0.007001119:503:0:0:0:1:0:-:Ground:$15:511:0.007001119:502:0:0:0:1:0:-:Ground:$15:511:0.007001119:501:0:0:0:1:0:-:Ground:$15:511:0.007001119:500:0:0:0:1:0:-:Ground:$15:512:0.007001119:507:0:0:0:1:0:-:Ground:$15:512:0.007001119:506:0:0:0:1:0:-:Ground:$15:512:0.007001119:505:0:0:0:1:0:-:Ground:$15:512:0.007001119:504:0:0:0:1:0:-:Ground:$15:512:0.007001119:503:0:0:0:1:0:-:Ground:$15:512:0.007001119:502:0:0:0:1:0:-:Ground:$15:512:0.007001119:501:0:0:0:1:0:-:Ground:$15:512:0.007001119:500:0:0:0:1:0:-:Ground:$15:513:0.007001119:507:0:0:0:1:0:-:Ground:$15:513:0.007001119:506:0:0:0:1:0:-:Ground:$15:513:0.007001119:505:0:0:0:1:0:-:Ground:$15:513:0.007001119:504:0:0:0:1:0:-:Ground:$15:513:0.007001119:503:0:0:0:1:0:-:Ground:$15:513:0.007001119:502:0:0:0:1:0:-:Ground:$15:513:0.007001119:501:0:0:0:1:0:-:Ground:$15:513:0.007001119:500:0:0:0:1:0:-:Ground:$15:514:0.007001119:507:0:0:0:1:0:-:Ground:$15:514:0.007001119:506:0:0:0:1:0:-:Ground:$15:514:0.007001119:505:0:0:0:1:0:-:Ground:$15:514:0.007001119:504:0:0:0:1:0:-:Ground:$15:514:0.007001119:503:0:0:0:1:0:-:Ground:$15:514:0.007001119:502:0:0:0:1:0:-:Ground:$15:514:0.007001119:501:0:0:0:1:0:-:Ground:$15:514:0.007001119:500:0:0:0:1:0:-:Ground:$15:515:0.007001119:507:0:0:0:1:0:-:Ground:$15:515:0.007001119:506:0:0:0:1:0:-:Ground:$15:515:0.007001119:505:0:0:0:1:0:-:Ground:$15:515:0.007001119:504:0:0:0:1:0:-:Ground:$15:515:0.007001119:503:0:0:0:1:0:-:Ground:$15:515:0.007001119:502:0:0:0:1:0:-:Ground:$15:515:0.007001119:501:0:0:0:1:0:-:Ground:$15:515:0.007001119:500:0:0:0:1:0:-:Ground:$15:516:0.007001119:507:0:0:0:1:0:-:Ground:$15:516:0.007001119:506:0:0:0:1:0:-:Ground:$15:516:0.007001119:505:0:0:0:1:0:-:Ground:$15:516:0.007001119:504:0:0:0:1:0:-:Ground:$15:516:0.007001119:503:0:0:0:1:0:-:Ground:$15:516:0.007001119:502:0:0:0:1:0:-:Ground:$15:516:0.007001119:501:0:0:0:1:0:-:Ground:$15:516:0.007001119:500:0:0:0:1:0:-:Ground:$15:517:0.007001119:507:0:0:0:1:0:-:Ground:$15:517:0.007001119:506:0:0:0:1:0:-:Ground:$15:517:0.007001119:505:0:0:0:1:0:-:Ground:$15:517:0.007001119:504:0:0:0:1:0:-:Ground:$15:517:0.007001119:503:0:0:0:1:0:-:Ground:$15:517:0.007001119:502:0:0:0:1:0:-:Ground:$15:517:0.007001119:501:0:0:0:1:0:-:Ground:$15:517:0.007001119:500:0:0:0:1:0:-:Ground:$15:518:0.007001119:507:0:0:0:1:0:-:Ground:$15:518:0.007001119:506:0:0:0:1:0:-:Ground:$15:518:0.007001119:505:0:0:0:1:0:-:Ground:$15:518:0.007001119:504:0:0:0:1:0:-:Ground:$15:518:0.007001119:503:0:0:0:1:0:-:Ground:$15:518:0.007001119:502:0:0:0:1:0:-:Ground:$15:518:0.007001119:501:0:0:0:1:0:-:Ground:$15:518:0.007001119:500:0:0:0:1:0:-:Ground:$15:519:0.007001119:507:0:0:0:1:0:-:Ground:$15:519:0.007001119:506:0:0:0:1:0:-:Ground:$15:519:0.007001119:505:0:0:0:1:0:-:Ground:$15:519:0.007001119:504:0:0:0:1:0:-:Ground:$15:519:0.007001119:503:0:0:0:1:0:-:Ground:$15:519:0.007001119:502:0:0:0:1:0:-:Ground:$15:519:0.007001119:501:0:0:0:1:0:-:Ground:$15:519:0.007001119:500:0:0:0:1:0:-:Ground:$15:485:0.007001119:493:0:0:0:1:0:-:Ground:$15:485:0.007001119:492:0:0:0:1:0:-:Ground:$15:485:0.007001119:491:0:0:0:1:0:-:Ground:$15:485:0.007001119:490:0:0:0:1:0:-:Ground:$15:485:0.007001119:489:0:0:0:1:0:-:Ground:$15:485:0.007001119:488:0:0:0:1:0:-:Ground:$15:485:0.007001119:487:0:0:0:1:0:-:Ground:$15:485:0.007001119:486:0:0:0:1:0:-:Ground:$15:485:0.007001119:485:0:0:0:1:0:-:Ground:$15:485:0.007001119:484:0:0:0:1:0:-:Ground:$15:485:0.007001119:483:0:0:0:1:0:-:Ground:$15:485:0.007001119:482:0:0:0:1:0:-:Ground:$15:484:0.007001119:493:0:0:0:1:0:-:Ground:$15:484:0.007001119:492:0:0:0:1:0:-:Ground:$15:484:0.007001119:491:0:0:0:1:0:-:Ground:$15:484:0.007001119:490:0:0:0:1:0:-:Ground:$15:484:0.007001119:489:0:0:0:1:0:-:Ground:$15:484:0.007001119:488:0:0:0:1:0:-:Ground:$15:484:0.007001119:487:0:0:0:1:0:-:Ground:$15:484:0.007001119:486:0:0:0:1:0:-:Ground:$15:484:0.007001119:485:0:0:0:1:0:-:Ground:$15:484:0.007001119:484:0:0:0:1:0:-:Ground:$15:484:0.007001119:483:0:0:0:1:0:-:Ground:$15:484:0.007001119:482:0:0:0:1:0:-:Ground:$15:483:0.007001119:493:0:0:0:1:0:-:Ground:$15:483:0.007001119:492:0:0:0:1:0:-:Ground:$15:483:0.007001119:491:0:0:0:1:0:-:Ground:$15:483:0.007001119:490:0:0:0:1:0:-:Ground:$15:483:0.007001119:489:0:0:0:1:0:-:Ground:$15:483:0.007001119:488:0:0:0:1:0:-:Ground:$15:483:0.007001119:487:0:0:0:1:0:-:Ground:$15:483:0.007001119:486:0:0:0:1:0:-:Ground:$15:483:0.007001119:485:0:0:0:1:0:-:Ground:$15:483:0.007001119:484:0:0:0:1:0:-:Ground:$15:483:0.007001119:483:0:0:0:1:0:-:Ground:$15:483:0.007001119:482:0:0:0:1:0:-:Ground:$15:482:0.007001119:493:0:0:0:1:0:-:Ground:$15:482:0.007001119:492:0:0:0:1:0:-:Ground:$15:482:0.007001119:491:0:0:0:1:0:-:Ground:$15:482:0.007001119:490:0:0:0:1:0:-:Ground:$15:482:0.007001119:489:0:0:0:1:0:-:Ground:$15:482:0.007001119:488:0:0:0:1:0:-:Ground:$15:482:0.007001119:487:0:0:0:1:0:-:Ground:$15:482:0.007001119:486:0:0:0:1:0:-:Ground:$15:482:0.007001119:485:0:0:0:1:0:-:Ground:$15:482:0.007001119:484:0:0:0:1:0:-:Ground:$15:482:0.007001119:483:0:0:0:1:0:-:Ground:$15:482:0.007001119:482:0:0:0:1:0:-:Ground:$15:485:0.007001119:494:0:0:0:1:0:-:Ground:$15:484:0.007001119:494:0:0:0:1:0:-:Ground:$15:483:0.007001119:494:0:0:0:1:0:-:Ground:$15:482:0.007001119:494:0:0:0:1:0:-:Ground:$15:516:0.007001119:511:0:0:0:1:0:-:Ground:$15:516:0.007001119:510:0:0:0:1:0:-:Ground:$15:516:0.007001119:509:0:0:0:1:0:-:Ground:$15:516:0.007001119:508:0:0:0:1:0:-:Ground:$15:517:0.007001119:511:0:0:0:1:0:-:Ground:$15:517:0.007001119:510:0:0:0:1:0:-:Ground:$15:517:0.007001119:509:0:0:0:1:0:-:Ground:$15:517:0.007001119:508:0:0:0:1:0:-:Ground:$15:518:0.007001119:511:0:0:0:1:0:-:Ground:$15:518:0.007001119:510:0:0:0:1:0:-:Ground:$15:518:0.007001119:509:0:0:0:1:0:-:Ground:$15:518:0.007001119:508:0:0:0:1:0:-:Ground:$15:519:0.007001119:511:0:0:0:1:0:-:Ground:$15:519:0.007001119:510:0:0:0:1:0:-:Ground:$15:519:0.007001119:509:0:0:0:1:0:-:Ground:$15:519:0.007001119:508:0:0:0:1:0:-:Ground:$16:510.5:2.118324:494.5:0:0:0:1:0:-:Ground:$16:507.5:2.118324:494.5:0:0:0:1:0:-:Ground:$16:504.5:2.118324:493.5:0:0:0:1:0:-:Ground:$16:500.5:2.118324:490.5:0:0:0:1:0:-:Ground:$16:500.5:2.118324:487.5:0:0:0:1:0:-:Ground:$16:504.5:2.118324:485.5:0:0:0:1:0:-:Ground:$16:515.5:2.118325:487.5:0:0:0:1:0:-:Ground:$16:515.5:2.118324:490.5:0:0:0:1:0:-:Ground:$16:510.5:2.118324:490.5:0:0:0:1:0:-:Ground:$16:502.5:2.118324:497.5:0:0:0:1:0:-:Ground:$16:499.5:2.118324:493.5:0:0:0:1:0:-:Ground:$16:498.5:2.118324:485.5:0:0:0:1:0:-:Ground:$16:495.5:2.118324:485.5:0:0:0:1:0:-:Ground:$16:490.5:2.118324:487.5:0:0:0:1:0:-:Ground:$16:487.5:2.118324:488.5:0:0:0:1:0:-:Ground:$16:484.5:2.118324:490.5:0:0:0:1:0:-:Ground:$16:487.5:2.118324:497.5:0:0:0:1:0:-:Ground:$16:487.5:2.118324:500.5:0:0:0:1:0:-:Ground:$16:484.5:2.118324:501.5:0:0:0:1:0:-:Ground:$16:484.5:2.118324:498.5:0:0:0:1:0:-:Ground:$16:485.5:2.118324:508.5:0:0:0:1:0:-:Ground:$16:488.5:2.118324:509.5:0:0:0:1:0:-:Ground:$16:506.5:2.118324:510.5:0:0:0:1:0:-:Ground:$16:514.5:2.118324:498.5:0:0:0:1:0:-:Ground:$17:496:0.2483709:491:0:0:0:1:0:-:Ground:$17:495:0.2483709:490:0:0:0:1:0:-:Ground:$17:494:0.2483709:489:0:0:0:1:0:-:Ground:$17:495:0.2483709:489:0:0:0:1:0:-:Ground:$17:496:0.2483709:489:0:0:0:1:0:-:Ground:$17:497:0.2483708:490:0:0:0:1:0:-:Ground:$17:498:0.2483708:490:0:0:0:1:0:-:Ground:$17:499:0.2483708:491:0:0:0:1:0:-:Ground:$18:494:0.6070023:494:0:0:0:1:0:-:Ground:$19:491:0.5070022:494:0:0:0:1:0:-:Ground:$20:493:0.6420021:502.5:0:90:0:1:0:-:Details:$21:496:1.257002:499.5:0:180:0:1:0:-:Details:$21:496:1.257002:497.5:0:180:0:1:0:-:Details:$22:493:0.3659202:506:0:270:0:1:0:-:Details:$23:492.9522:1.609801:506.3891:0:90:0:1:0:-:Details:$24:496:0.1292455:506:0:0:0:1:0:-:Details:$24:491:0.1292455:496:0:0:0:1:0:-:Details:$25:496:1.201938:506:0:0:0:1:0:-:Details:$26:501:0.5420203:507:0:90:0:1:0:-:Details:$26:502:0.5420203:507:0:90:0:1:0:-:Details:$26:503:0.5420203:507:0:90:0:1:0:-:Details:$26:504:0.5420203:507:0:90:0:1:0:-:Details:$26:505:0.5420203:507:0:90:0:1:0:-:Details:$26:506:0.5420203:507:0:90:0:1:0:-:Details:$26:507:0.5420203:507:0:90:0:1:0:-:Details:$27:508:0.5420201:507:0:90:0:1:0:-:Details:$28:509:0.5420203:505:0:180:0:1:0:-:Details:$28:509:0.5420203:504:0:180:0:1:0:-:Details:$29:509:0.5420203:503:0:180:0:1:0:-:Details:$30:500:0.5420203:507:0:90:0:1:0:-:Details:$31:509:0.5420203:502:0:180:0:1:0:-:Details:$32:498:1.13607:506:0:90:0:1:0:-:Details:$33:499:0.3348796:506:0:270:0:1:0:-:Details:$34:504.5:0.5670027:502.5:0:90:0:1:0:-:Details:$35:503:0.5570022:503:0:180:0:1:0:-:Details:$35:504:0.5570022:502:0:90:0:1:0:-:Details:$35:504:0.5570023:504:0:270:0:1:0:-:Details:$35:505:0.5570022:503:0:0:0:1:0:-:Details:$35:499:0.5570022:501:0:90:0:1:0:-:Details:$35:500:0.5570022:501:0:90:0:1:0:-:Details:$36:503:1.410283:503:0:0:0:1:0:-:Details:$36:504:1.410283:502:0:0:0:1:0:-:Details:$37:504:1.033586:503:0:0:0:1:0:-:Details:$
+  currentMapIndex: 0
+  currentMapName: House

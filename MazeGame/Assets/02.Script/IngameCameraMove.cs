@@ -15,10 +15,10 @@ public class IngameCameraMove : MonoBehaviour {
 	{
 		if (m_targetObj == null) 
 		{
-			UnitControl ctrlObject = UnitControl.GetInstance ();
+			GameObject ctrlObject = Player.GetInstance().gameObject;
 			if (ctrlObject != null)
 			{
-				m_targetObj = UnitControl.GetInstance ().gameObject;
+				m_targetObj = ctrlObject;
 				m_basePosition = new Vector3 (0, 5.27f, -2.84f);
 
 				transform.position = m_basePosition + m_targetObj.transform.position;

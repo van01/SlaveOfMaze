@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
 		return m_instance;
 	}
 
+	public AstarPath m_AstarPath = null;
 	string m_strMapName = string.Empty;
 
 	// Use this for initialization
@@ -46,13 +47,15 @@ public class GameManager : MonoBehaviour {
 	//*************************************************************//
 	private void OnStart()
 	{
-		UnitControl.GetInstance().Event_GameStart();
+		Player.GetInstance().Event_GameStart();
+
+		m_AstarPath.Scan ();
 	}
 	private void OnReady() {
 		PopupMgr.GetInstance().ShowPopup (ePopupType.Common, cbStart, "Ready", "GO");
 
 		try {
-			UnitControl.GetInstance().Event_Ready();
+			Player.GetInstance().Event_Ready();
 		}catch (System.Exception e)
 		{
 			Debug.LogWarning (e.ToString());
@@ -64,7 +67,7 @@ public class GameManager : MonoBehaviour {
 	private void OnGameOver()
 	{
 		PopupMgr.GetInstance().ShowPopup (ePopupType.Common, cbGameOver, "Game Over", "Retry");
-		UnitControl.GetInstance().Event_GameOver();
+		Player.GetInstance().Event_GameOver();
 	}
 
 	//*************************************************************//
@@ -118,6 +121,7 @@ public class GameManager : MonoBehaviour {
 		uteMapLoader loader = gameObject.GetComponent<uteMapLoader> ();
 		loader.SetMap (strStageName);
 		loader.LoadMap ();
+
 
 		IngameCameraMove cameraMove = Camera.main.GetComponent<IngameCameraMove> ();
 		if (cameraMove == null) {
