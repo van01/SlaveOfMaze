@@ -41,8 +41,8 @@ public abstract class UnitControl : MonoBehaviour {
 		//m_rigibody = gameObject.GetComponent<Rigidbody> ();
 
 		if (eType.Player == type) {
-			m_rigibody = gameObject.AddComponent<Rigidbody> ();
-			m_rigibody.useGravity = true;
+			//m_rigibody = gameObject.AddComponent<Rigidbody> ();
+			//m_rigibody.useGravity = true;
 		}
 	}
 	
