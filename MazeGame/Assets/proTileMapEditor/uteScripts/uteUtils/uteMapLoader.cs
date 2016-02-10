@@ -310,6 +310,8 @@ public class uteMapLoader : MonoBehaviour {
 			newObj.name = objID.ToString();
 			newObj.transform.localEulerAngles = new Vector3(rX,rY,rZ) + obj.transform.localEulerAngles;
 
+			//Debug.Log ("layerName : " + layerName + ", ObjID : " + objID.ToString());
+
 			if(isStatic)
 			{
 				newObj.layer = LayerMask.NameToLayer(layerName);
@@ -322,6 +324,7 @@ public class uteMapLoader : MonoBehaviour {
 				newObj.transform.parent = MAP_D.transform;
 			}
 		}
+
 
 		if(StaticBatching)
 		{

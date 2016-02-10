@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public abstract class UnitControl : MonoBehaviour {
 
@@ -23,27 +22,54 @@ public abstract class UnitControl : MonoBehaviour {
 		Fall_Out = 6,
 		Dead = 7,
 		Ready = 8,
+        Stop = 9,
 	};
 
-	eAniState m_eAniState = eAniState.None;
+	protected eAniState m_eAniState = eAniState.None;
+    
 	bool m_isControl = false;
 
 	void OnEnable()
 	{
 
 	}
+    
+    void Awake()
+    {
+        GameManager.AddListener (OnEvent);
+    }
+    
+    void OnDestroy()
+    {
+        GameManager.RemoveListener (OnEvent);
+    }
+    
+    protected virtual void OnEvent (eEvent msg, System.Object param1, string param2) 
+    {
+        Debug.Log ("OnEvent : " + msg);  
+        
+        switch (msg)
+        {
+            case eEvent.Ready:
+                ChangeState (eAniState.Ready);
+                break;
+            case eEvent.Start:
+                ChangeState (eAniState.None);
+                break;
+            case eEvent.StageClear:
+                ChangeState (eAniState.Arrive_Goal);
+                break;
+            case eEvent.GameOver:
+                ChangeState (eAniState.Dead);
+                break;
+        }  
+    }
 
 	Rigidbody m_rigibody;
 
 	// Use this for initialization
 	protected void Start (eType type) {
 		m_eType = type;
-		//m_rigibody = gameObject.GetComponent<Rigidbody> ();
-
-		if (eType.Player == type) {
-			//m_rigibody = gameObject.AddComponent<Rigidbody> ();
-			//m_rigibody.useGravity = true;
-		}
 	}
 	
 	// Update is called once per frame
@@ -57,6 +83,13 @@ public abstract class UnitControl : MonoBehaviour {
 	}
 
 	protected abstract void InputProcess ();
+    
+    protected void AddRigidbody()
+    {
+        m_rigibody = gameObject.AddComponent<Rigidbody> ();
+        m_rigibody.useGravity = true;
+        m_rigibody.freezeRotation = true;
+    }
 	
 	void Move()
 	{
@@ -147,11 +180,13 @@ public abstract class UnitControl : MonoBehaviour {
 			break;
 		case eAniState.Arrive_Goal:
 			m_isControl = false;
-			GameManager.GetInstance().Event_Goal();
 			break;
 		case eAniState.Fall_Out:
 			m_isControl = false;
-			GameManager.GetInstance().Event_GameOver();
+			if (m_eType == eType.Player)
+			{
+				GameManager.GetInstance().Event_GameOver();
+			}
 			break;
 		case eAniState.Dead:
 			m_isControl = false;
@@ -178,8 +213,12 @@ public abstract class UnitControl : MonoBehaviour {
 		Debug.Log ("OnTriggerEnter : " + other.tag);
 
 		if (other.tag == "Goal") {
-			ChangeState (eAniState.Arrive_Goal);
 			Debug.Log ("Goal!!!!");
+			if (m_eType == eType.Player)
+			{
+				GameManager.GetInstance().Event_Goal();
+			}
+
 		}
 	}
 
@@ -187,24 +226,5 @@ public abstract class UnitControl : MonoBehaviour {
 	{
 		ChangeState (eAniState.None);
 		gameObject.transform.position = new Vector3 (x, 0,z);
-	}
-
-
-	//*************************************************************//
-	// Public method
-	//*************************************************************//
-	public void Event_Ready()
-	{
-		ChangeState (eAniState.Ready);
-	}
-
-	public void Event_GameStart()
-	{
-		ChangeState (eAniState.None);
-	}
-
-	public void Event_GameOver()
-	{
-		ChangeState (eAniState.Dead);
 	}
 }

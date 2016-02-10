@@ -71,6 +71,21 @@ public class uteCombineChildren : MonoBehaviour {
 		StartCoroutine(_Batch(AddMeshColliders,RemoveLeftOvers,isItPatternExport,isPrepareForLightmapping));
 	}
 
+	public int GetObjectLayer (GameObject obj)
+	{
+		int nLayer = 0;
+		if (obj.transform.parent.name == "STATIC")
+		{
+			nLayer = obj.gameObject.layer;
+		}
+		else
+		{
+			nLayer = obj.transform.parent.gameObject.layer;
+		}
+
+		return nLayer;
+	}
+
 	public IEnumerator _Batch (bool AddMeshColliders=false, bool RemoveLeftOvers=false, bool isItPatternExport=false, bool isPrepareForLightmapping=false)
 	{
 		for(int i=0;i<BatchedObjects.Count;i++)
@@ -83,7 +98,6 @@ public class uteCombineChildren : MonoBehaviour {
 		Component[] filters = GetComponentsInChildren(typeof(MeshFilter));
 		Matrix4x4 myTransform = transform.worldToLocalMatrix;
 		List<Hashtable> materialToMesh = new List<Hashtable>();
-		List<int> layerName = new List<int> ();
 		int vertexCalc = 0;
 		int hasIterations = 0;
 		materialToMesh.Add(new Hashtable());
@@ -119,19 +133,11 @@ public class uteCombineChildren : MonoBehaviour {
 					}
 					else
 					{
-						int nLayer = 0;
-						if (filter.transform.parent.name == "STATIC")
-						{
-							nLayer = filter.gameObject.layer;
-						}
-						else
-						{
-							nLayer = filter.transform.parent.gameObject.layer;
-						}
-						layerName.Add (nLayer);
+						int nLayer = GetObjectLayer (filter.gameObject);
 
 						objects = new ArrayList ();
 						objects.Add(instance);
+						materials[m].name = LayerMask.LayerToName (nLayer);
 						materialToMesh[hasIterations].Add(materials[m], objects);
 					}
 
@@ -178,9 +184,12 @@ public class uteCombineChildren : MonoBehaviour {
 				//go.AddComponent("MeshRenderer");
 				go.AddComponent<MeshRenderer>();
 				go.isStatic = true;
-				go.GetComponent<Renderer>().material = (Material)de.Key;
+                
+                Material mat = (Material)de.Key;
+				go.GetComponent<Renderer>().material = mat;
 				MeshFilter filter = (MeshFilter)go.GetComponent(typeof(MeshFilter));
 				filter.mesh = MeshCombineUtility.Combine(instances, generateTriangleStrips);
+                filter.gameObject.layer = LayerMask.NameToLayer(mat.name);
 
 				if(isPrepareForLightmapping)
 				{
@@ -240,7 +249,6 @@ public class uteCombineChildren : MonoBehaviour {
 					}
 					else
 					{
-						children[s].layer = layerName[counterpp];
 						children[s].name = "Batch_"+(counterpp++).ToString();
 					}
 				}							

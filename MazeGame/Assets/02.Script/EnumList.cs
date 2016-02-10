@@ -11,3 +11,11 @@ public enum eResType{
 public enum ePopupType{
 	Common,
 }
+
+public enum eEvent
+{
+    Ready,
+    Start,
+    StageClear,
+    GameOver,
+}

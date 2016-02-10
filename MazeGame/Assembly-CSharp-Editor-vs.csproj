@@ -10,10 +10,11 @@
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
 	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
-	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
-  </PropertyGroup>
+	<LangVersion>default</LangVersion>
+</PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	<DebugSymbols>true</DebugSymbols>
 	<DebugType>full</DebugType>
@@ -23,7 +24,8 @@
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
-  </PropertyGroup>
+	<LangVersion>default</LangVersion>
+</PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
 	<DebugType>pdbonly</DebugType>
 	<Optimize>true</Optimize>
@@ -32,7 +34,8 @@
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
-  </PropertyGroup>
+	<LangVersion>default</LangVersion>
+</PropertyGroup>
   <ItemGroup>
 	<Reference Include="System" />
     <Reference Include="System.XML" />
@@ -147,6 +150,7 @@
      <Compile Include="Assets\AstarPathfindingProject\Editor\ModifierEditors\RaycastModifierEditor.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Editor\ModifierEditors\SmoothModifierEditor.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Editor\SeekerEditor.cs" />
+     <Compile Include="Assets\VSCode\Plugins\Editor\VSCode.cs" />
      <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteCategoryEditor.cs" />
      <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteDocumentation.cs" />
      <Compile Include="Assets\proTileMapEditor\uteScripts\Editor\uteGiveFeedback.cs" />
@@ -316,5 +320,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

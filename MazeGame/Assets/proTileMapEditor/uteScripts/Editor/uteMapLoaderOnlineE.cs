@@ -13,12 +13,10 @@ public class uteMapLoaderOnlineE : Editor {
 	public int selectedItemIndex;
 	private int lastSelectedIndex;
 	public int optIndex;
-	private int lastOptIndex;
 
 	private void Awake()
 	{
 		lastSelectedIndex = -1;
-		lastOptIndex = -1;
 
 		mapOptimizationLevel = new string[3];
 		mapOptimizationLevel[0] = "low";

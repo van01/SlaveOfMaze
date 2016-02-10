@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class GameManager : MonoBehaviour {
 
@@ -20,7 +21,11 @@ public class GameManager : MonoBehaviour {
 	static public GameManager GetInstance()
 	{
 		if (m_instance == null) {
-			m_instance = GameObject.Find ("GameManager").GetComponent<GameManager>();
+            GameObject obj = GameObject.Find ("GameManager");
+            if (obj != null)
+            {
+			     m_instance = obj.GetComponent<GameManager>();
+            }
 		}
 		return m_instance;
 	}
@@ -47,27 +52,21 @@ public class GameManager : MonoBehaviour {
 	//*************************************************************//
 	private void OnStart()
 	{
-		Player.GetInstance().Event_GameStart();
-
-		m_AstarPath.Scan ();
+        m_AstarPath.Scan ();
+        BroadcastMessage (eEvent.Start);
 	}
 	private void OnReady() {
 		PopupMgr.GetInstance().ShowPopup (ePopupType.Common, cbStart, "Ready", "GO");
-
-		try {
-			Player.GetInstance().Event_Ready();
-		}catch (System.Exception e)
-		{
-			Debug.LogWarning (e.ToString());
-		}
+        BroadcastMessage (eEvent.Ready);
 	}
 	private void OnStageClear() {
 		PopupMgr.GetInstance().ShowPopup (ePopupType.Common, cbNextStage, "Stage Clear", "Complete");
+        BroadcastMessage (eEvent.StageClear);
 	}
 	private void OnGameOver()
 	{
 		PopupMgr.GetInstance().ShowPopup (ePopupType.Common, cbGameOver, "Game Over", "Retry");
-		Player.GetInstance().Event_GameOver();
+        BroadcastMessage (eEvent.GameOver);
 	}
 
 	//*************************************************************//
@@ -93,6 +92,29 @@ public class GameManager : MonoBehaviour {
 		LoadStage (m_nStage);
 		ChangeStage (eStage.Stage_Ready);
 	}
+
+	//*************************************************************//
+	// Event Listener method
+	//*************************************************************//
+    
+    Action<eEvent, System.Object, string> m_listener;
+    static public void AddListener (Action<eEvent, System.Object, string> cb)
+    {
+        GetInstance().m_listener += cb;
+    }
+    
+    static public void RemoveListener(Action<eEvent, System.Object, string> cb)
+    {
+        GetInstance().m_listener -= cb;
+    } 
+    
+    private void BroadcastMessage(eEvent ev, System.Object obj=null, string msg = "")
+    {
+        if (m_listener != null)
+        {
+            m_listener (ev, obj, msg);
+        }
+    }
 
 	//*************************************************************//
 	// Public method
@@ -137,11 +159,11 @@ public class GameManager : MonoBehaviour {
 		case eStage.Stage_Ready:
 			OnReady ();
 			break;
-		case eStage.Stage_Clear:
-			OnStageClear();
-			break;
 		case eStage.Stage_StartGame:
 			OnStart ();
+			break;
+		case eStage.Stage_Clear:
+			OnStageClear();
 			break;
 		case eStage.Stage_GameOver:
 			OnGameOver();

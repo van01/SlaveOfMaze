@@ -1,6 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{899D54F3-7FC1-0C13-CC33-7753E765F90D}") = "MazeGame", "Assembly-CSharp-vs.csproj", "{A21DA567-4D02-FAFA-3719-CDAEF370184D}"
 EndProject
 Project("{899D54F3-7FC1-0C13-CC33-7753E765F90D}") = "MazeGame", "Assembly-CSharp-Editor-vs.csproj", "{28E71F1A-F883-1250-6F81-BA7E09B149C9}"
@@ -20,10 +19,7 @@ Global
 		{28E71F1A-F883-1250-6F81-BA7E09B149C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28E71F1A-F883-1250-6F81-BA7E09B149C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-																																																																		GlobalSection(MonoDevelopProperties) = preSolution
+																																	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -42,5 +38,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal

@@ -30,6 +30,7 @@ public class Player : UnitControl {
 
 	protected override void InputProcess()
 	{
+        /*
 		//if (eAniState.Arrive_Goal != m_eAniState) {
 		if (Input.GetKey ("up")) {
 			//Move (0,1);
@@ -46,6 +47,70 @@ public class Player : UnitControl {
 		} else {
 			ChangeState (eAniState.None);
 		}
+        */
+	}
+    
+    //*************************************************************//
+	// State Machine
+	//*************************************************************//
+	protected void ChangeState (eAniState eState)
+	{
+		if (m_eAniState == eState) {
+			return;
+		}
+        
+        base.ChangeState (eState);
+
+		m_eAniState = eState;
+		switch (eState)
+		{
+        }
+    }
+    
+	//*************************************************************//
+	// Broadcast method
+	//*************************************************************//
+    protected override void OnEvent (eEvent msg, System.Object param1, string param2) 
+    {
+        switch (msg)
+        {
+            case eEvent.Start:
+            	Event_GameStart();
+                break;
+            
+           case eEvent.GameOver:
+           		Event_GameOver();
+                break;
+                
+           case eEvent.Ready:
+                Event_Ready();
+                break;
+                
+           case eEvent.StageClear:
+                Event_StageClear();
+                break;
+        }
+    }
+
+    
+    void Event_Ready()
+    {
+        ChangeState (eAniState.Ready);
+    }
+    
+	void Event_GameStart()
+	{
+        //AddRigidbody();
+		ChangeState (eAniState.None);
 	}
 
+	void Event_GameOver()
+	{
+		ChangeState (eAniState.Dead);
+	}
+    
+    void Event_StageClear()
+    {
+        ChangeState (eAniState.Arrive_Goal);
+    }
 }

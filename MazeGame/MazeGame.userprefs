@@ -1,27 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/proTileMapEditor/uteScripts/uteUtils/uteCombineChildren.cs">
     <Files>
-      <File FileName="Assets/proTileMapEditor/uteScripts/uteUtils/uteMapLoader.cs" Line="341" Column="16" />
-      <File FileName="Assets/02.Script/UnitControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.Script/GameManager.cs" Line="123" Column="14" />
-      <File FileName="Assets/02.Script/Popup/Popup_Common.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.Script/PopupMgr.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.Script/Player.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.Script/Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.Script/IngameCameraMove.cs" Line="1" Column="1" />
-      <File FileName="Assets/AstarPathfindingProject/Core/AstarPath.cs" Line="1" Column="1" />
-      <File FileName="Assets/AstarPathfindingProject/Editor/AstarPathEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/AstarPathfindingProject/Core/Path.cs" Line="328" Column="1" />
-      <File FileName="Assets/proTileMapEditor/uteScripts/uteUtils/uteCombineChildren.cs" Line="88" Column="1" />
+      <File FileName="Assets/proTileMapEditor/uteScripts/uteUtils/uteMapLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets/proTileMapEditor/uteScripts/uteUtils/uteCombineChildren.cs" Line="192" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/chokyungsung/Devel/SlaveOfMaze/MazeGame/Assets/proTileMapEditor/uteScripts/uteUtils/uteMapLoader.cs" line="552" />
-      <Breakpoint file="/Users/chokyungsung/Devel/SlaveOfMaze/MazeGame/Assets/proTileMapEditor/uteScripts/uteUtils/uteMapLoader.cs" line="467" />
-      <Breakpoint file="/Users/chokyungsung/Devel/SlaveOfMaze/MazeGame/Assets/proTileMapEditor/uteScripts/uteUtils/uteCombineChildren.cs" line="159" />
-      <Breakpoint file="/Users/chokyungsung/Devel/SlaveOfMaze/MazeGame/Assets/proTileMapEditor/uteScripts/uteUtils/uteCombineChildren.cs" line="88" />
+      <Breakpoint file="/Users/chokyungsung/Devel/SlaveOfMaze/MazeGame/Assets/proTileMapEditor/uteScripts/uteUtils/uteCombineChildren.cs" line="253" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
